@@ -4,7 +4,16 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "start": "ts-node src/main.ts",
-    "dev": "nodemon --watch src --ext ts --exec \"ts-node src/main.ts\""
+    "start": "tsx src/main.ts",
+    "dev": "tsx watch src/main.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.6",
+    "typescript": "^6.0.3"
   }
 }

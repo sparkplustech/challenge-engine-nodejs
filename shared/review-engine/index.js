@@ -122,7 +122,7 @@ function readChallengeContext({ projectDir, challengeId, fallbackChallengeConfig
   };
 }
 
-function runFunctionalTests(files, projectDir, challengeId) {
+function runFunctionalTests(files, projectDir, challengeId, courseId) {
   const fileTotal = files.length;
   if (fileTotal === 0) {
     return {
@@ -150,7 +150,10 @@ function runFunctionalTests(files, projectDir, challengeId) {
 
   if (testFile && filePassedChecks === fileTotal) {
     try {
-      execFileSync('node', ['--experimental-strip-types', '--test', testFile], {
+      const testArgs = courseId === '05-nestjs-enterprise-framework'
+        ? ['--import=reflect-metadata', '--import=tsx', '--test', testFile]
+        : ['--experimental-strip-types', '--test', testFile];
+      execFileSync('node', testArgs, {
         cwd: projectDir,
         encoding: 'utf-8',
         stdio: 'pipe'
@@ -659,7 +662,7 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
     });
 
     const layers = {
-      functionalTests: runFunctionalTests(files, projectDir, challenge.id),
+      functionalTests: runFunctionalTests(files, projectDir, challenge.id, courseId),
       codeQuality: runCodeQuality(files),
       architecture: runArchitectureChecks(files, metadata.patternsRequired || []),
       bestPractices: runBestPractices(files),
