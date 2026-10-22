@@ -1,11 +1,29 @@
 {
   "courseId": "02-nodejs-core-fundamentals",
   "courseName": "Node.js Core Fundamentals",
-  "averageScore": 0,
-  "completionPercentage": 0,
+  "averageScore": 85,
+  "completionPercentage": 6.67,
   "totalChallenges": 15,
-  "completedChallenges": 0,
+  "completedChallenges": 1,
+  "reviewedChallengesCount": 1,
   "badgeLevel": "none",
-  "challengeResults": [],
-  "generatedAt": "2026-08-06T12:50:02.127Z"
+  "challengeResults": [
+    {
+      "challengeId": "07-dotenv-script-automation",
+      "challengeName": "Dotenv Script Automation",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:53:35.252Z"
+    }
+  ],
+  "skillStrengths": [
+    "dotenv",
+    "npm scripts"
+  ],
+  "improvementAreas": [],
+  "aiStrengths": [],
+  "aiImprovements": [
+    "Set GROQ_API_KEY to enable AI review."
+  ],
+  "generatedAt": "2026-10-22T16:53:35.253Z"
 }

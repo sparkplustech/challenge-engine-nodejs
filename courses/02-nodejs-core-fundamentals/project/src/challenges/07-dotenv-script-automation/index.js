@@ -1,4 +1,13 @@
-// TODO: Implement 07-dotenv-script-automation - Dotenv Script Automation
+import dotenv from "dotenv";
+
 export function solve_07_dotenv_script_automation() {
-  throw new Error('Not implemented');
+  dotenv.config();
+
+  const config = {
+    appName: process.env.APP_NAME,
+    port: process.env.PORT,
+    environment: process.env.NODE_ENV
+  };
+
+  return config;
 }

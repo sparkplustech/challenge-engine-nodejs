@@ -4,8 +4,8 @@
   "totals": {
     "trackedSkills": 187,
     "skillAppearances": 195,
-    "reviewedSkillAppearances": 26,
-    "passedSkillAppearances": 26
+    "reviewedSkillAppearances": 28,
+    "passedSkillAppearances": 28
   },
   "topStrengths": [
     "arrow functions",
@@ -16,10 +16,10 @@
     "CommonJS",
     "control flow",
     "destructuring",
+    "dotenv",
     "error handling",
     "ES modules",
-    "event loop",
-    "filter"
+    "event loop"
   ],
   "improvementAreas": [
     "arrow functions",
@@ -30,10 +30,10 @@
     "CommonJS",
     "control flow",
     "destructuring",
+    "dotenv",
     "error handling",
     "ES modules",
-    "event loop",
-    "filter"
+    "event loop"
   ],
   "skills": [
     {
@@ -55,9 +55,9 @@
     {
       "skill": "dotenv",
       "appearances": 2,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "02-nodejs-core-fundamentals"
       ],
@@ -1377,9 +1377,9 @@
     {
       "skill": "npm scripts",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "02-nodejs-core-fundamentals"
       ],
@@ -2480,5 +2480,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-22T16:06:35.141Z"
+  "generatedAt": "2026-10-22T16:53:35.263Z"
 }

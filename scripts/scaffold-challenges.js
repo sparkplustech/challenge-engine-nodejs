@@ -114,6 +114,15 @@ function writeText(filePath, content, allowOverwrite = false) {
   return true;
 }
 
+function buildProjectEnv(courseConfig) {
+  return [
+    `APP_NAME=${courseConfig.courseName}`,
+    'PORT=3000',
+    'NODE_ENV=development',
+    ''
+  ].join('\n');
+}
+
 function buildProjectReadme(courseConfig) {
   const moduleLines = courseConfig.modules
     .map((module) => {
@@ -349,6 +358,17 @@ function runScaffold() {
 
     const projectReadmePath = join(courseDir, 'project', 'README.md');
     if (writeText(projectReadmePath, buildProjectReadme(courseConfig), force)) {
+      createdCount += 1;
+    }
+
+    const projectEnv = buildProjectEnv(courseConfig);
+    const envExamplePath = join(courseDir, 'project', '.env.example');
+    if (writeText(envExamplePath, projectEnv, force)) {
+      createdCount += 1;
+    }
+
+    const envPath = join(courseDir, 'project', '.env');
+    if (writeText(envPath, projectEnv)) {
       createdCount += 1;
     }
 
