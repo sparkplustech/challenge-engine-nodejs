@@ -14,6 +14,7 @@ Demonstrate utility-library patterns or package publishing conventions in a reus
 2. Demonstrate utility library usage (for example lodash/dayjs patterns) or package publishing conventions.
 3. Export a reusable helper or module surface from the scoped file.
 4. **Clean up** — Remove all `TODO` and `throw new Error('Not implemented')` placeholders before review.
+5. **Package Format** - const \<package_name\> = \` { <Package Details Here> } \`
 
 ## Code
 

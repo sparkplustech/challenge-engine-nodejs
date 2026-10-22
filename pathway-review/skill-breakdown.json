@@ -4,11 +4,37 @@
   "totals": {
     "trackedSkills": 187,
     "skillAppearances": 195,
-    "reviewedSkillAppearances": 0,
-    "passedSkillAppearances": 0
+    "reviewedSkillAppearances": 26,
+    "passedSkillAppearances": 26
   },
-  "topStrengths": [],
-  "improvementAreas": [],
+  "topStrengths": [
+    "arrow functions",
+    "async/await",
+    "callbacks",
+    "chaining",
+    "classes",
+    "CommonJS",
+    "control flow",
+    "destructuring",
+    "error handling",
+    "ES modules",
+    "event loop",
+    "filter"
+  ],
+  "improvementAreas": [
+    "arrow functions",
+    "async/await",
+    "callbacks",
+    "chaining",
+    "classes",
+    "CommonJS",
+    "control flow",
+    "destructuring",
+    "error handling",
+    "ES modules",
+    "event loop",
+    "filter"
+  ],
   "skills": [
     {
       "skill": "middleware",
@@ -207,9 +233,9 @@
     {
       "skill": "arrow functions",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -220,9 +246,9 @@
     {
       "skill": "async/await",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -272,9 +298,9 @@
     {
       "skill": "callbacks",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -285,9 +311,9 @@
     {
       "skill": "chaining",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -324,9 +350,9 @@
     {
       "skill": "classes",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -337,9 +363,9 @@
     {
       "skill": "CommonJS",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -363,9 +389,9 @@
     {
       "skill": "control flow",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -532,9 +558,9 @@
     {
       "skill": "destructuring",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -636,9 +662,9 @@
     {
       "skill": "error handling",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -649,9 +675,9 @@
     {
       "skill": "ES modules",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -662,9 +688,9 @@
     {
       "skill": "event loop",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -766,9 +792,9 @@
     {
       "skill": "filter",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -792,9 +818,9 @@
     {
       "skill": "find",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -805,9 +831,9 @@
     {
       "skill": "forEach",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -948,9 +974,9 @@
     {
       "skill": "import/export",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -974,9 +1000,9 @@
     {
       "skill": "inheritance",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1091,9 +1117,9 @@
     {
       "skill": "let/const",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1156,9 +1182,9 @@
     {
       "skill": "map",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1312,9 +1338,9 @@
     {
       "skill": "non-blocking I/O",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1585,9 +1611,9 @@
     {
       "skill": "Promises",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1598,9 +1624,9 @@
     {
       "skill": "prototypes",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -1702,9 +1728,9 @@
     {
       "skill": "reduce",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -2066,9 +2092,9 @@
     {
       "skill": "spread/rest",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -2157,9 +2183,9 @@
     {
       "skill": "string manipulation",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -2222,9 +2248,9 @@
     {
       "skill": "template literals",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -2261,9 +2287,9 @@
     {
       "skill": "try/catch",
       "appearances": 1,
-      "reviewedChallenges": 0,
-      "passedChallenges": 0,
-      "passRate": 0,
+      "reviewedChallenges": 1,
+      "passedChallenges": 1,
+      "passRate": 100,
       "courseIds": [
         "01-javascript-fundamentals-async"
       ],
@@ -2454,5 +2480,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-06T12:50:02.388Z"
+  "generatedAt": "2026-10-22T16:06:35.141Z"
 }
