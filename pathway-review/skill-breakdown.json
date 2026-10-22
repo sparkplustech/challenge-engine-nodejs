@@ -773,7 +773,7 @@
         "04-typescript-backend-development"
       ],
       "challengeIds": [
-        "07-express-ts-migration-workflow"
+        "01-express-ts-migration-workflow"
       ]
     },
     {
@@ -1332,7 +1332,7 @@
         "04-typescript-backend-development"
       ],
       "challengeIds": [
-        "07-express-ts-migration-workflow"
+        "01-express-ts-migration-workflow"
       ]
     },
     {
@@ -2307,7 +2307,7 @@
         "04-typescript-backend-development"
       ],
       "challengeIds": [
-        "07-express-ts-migration-workflow"
+        "01-express-ts-migration-workflow"
       ]
     },
     {
@@ -2346,7 +2346,7 @@
         "04-typescript-backend-development"
       ],
       "challengeIds": [
-        "01-typed-primitives-functions"
+        "07-typed-primitives-functions"
       ]
     },
     {
@@ -2372,7 +2372,7 @@
         "04-typescript-backend-development"
       ],
       "challengeIds": [
-        "01-typed-primitives-functions"
+        "07-typed-primitives-functions"
       ]
     },
     {
@@ -2480,5 +2480,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-22T16:53:35.263Z"
+  "generatedAt": "2026-10-22T17:34:57.856Z"
 }
