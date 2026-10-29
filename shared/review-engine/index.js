@@ -122,6 +122,11 @@ function readChallengeContext({ projectDir, challengeId, fallbackChallengeConfig
   };
 }
 
+function getNodeTestArgs(courseId, testFile) {
+  return courseId === '05-nestjs-enterprise-framework'
+    ? ['--import=reflect-metadata', '--import=tsx', '--test', testFile]
+    : ['--experimental-strip-types', '--test', testFile];
+}
 function runFunctionalTests(files, projectDir, challengeId, courseId) {
   const fileTotal = files.length;
   if (fileTotal === 0) {
@@ -150,9 +155,7 @@ function runFunctionalTests(files, projectDir, challengeId, courseId) {
 
   if (testFile && filePassedChecks === fileTotal) {
     try {
-      const testArgs = courseId === '05-nestjs-enterprise-framework'
-        ? ['--import=reflect-metadata', '--import=tsx', '--test', testFile]
-        : ['--experimental-strip-types', '--test', testFile];
+      const testArgs = getNodeTestArgs(courseId, testFile);
       execFileSync('node', testArgs, {
         cwd: projectDir,
         encoding: 'utf-8',
@@ -286,47 +289,48 @@ function runBestPractices(files) {
   };
 }
 
-function runE2ETests(projectDir, challengeId) {
-  const unitCandidates = [
-    join(projectDir, 'tests', `challenge-${challengeId}.test.js`),
-    join(projectDir, 'tests', `challenge-${challengeId}.test.ts`)
-  ];
-
+function runE2ETests(projectDir, challengeId, courseId) {
   const e2eCandidates = [
-    join(projectDir, 'tests', 'e2e', `challenge-${challengeId}.spec.js`),
-    join(projectDir, 'tests', 'e2e', `challenge-${challengeId}.spec.ts`)
+    join(projectDir, 'tests', 'e2e', 'challenge-' + challengeId + '.spec.js'),
+    join(projectDir, 'tests', 'e2e', 'challenge-' + challengeId + '.spec.ts')
   ];
 
-  const hasUnit = unitCandidates.some((file) => exists(file));
-  const hasE2E = e2eCandidates.some((file) => exists(file));
-
-  if (!hasUnit && !hasE2E) {
+  const testFile = e2eCandidates.find((file) => exists(file));
+  if (!testFile) {
     return {
-      score: 100,
+      score: 0,
       mode: 'not_configured',
-      hasUnit,
-      hasE2E,
-      unitCandidates,
+      hasE2E: false,
+      testFile: null,
+      testPassed: null,
+      testError: null,
       e2eCandidates,
-      note: 'No unit/e2e challenge tests were found; this layer is treated as neutral.'
+      note: 'No E2E spec is configured; E2E does not reduce the core score.'
     };
   }
 
-  let score = 30;
-  if (hasUnit) {
-    score += 35;
-  }
-  if (hasE2E) {
-    score += 35;
+  let testPassed = true;
+  let testError = null;
+  try {
+    execFileSync('node', getNodeTestArgs(courseId, testFile), {
+      cwd: projectDir,
+      encoding: 'utf-8',
+      stdio: 'pipe'
+    });
+  } catch (error) {
+    testPassed = false;
+    testError = String(error.stderr || error.stdout || error.message).trim().slice(0, 500);
   }
 
   return {
-    score,
-    mode: 'evidence',
-    hasUnit,
-    hasE2E,
-    unitCandidates,
-    e2eCandidates
+    score: testPassed ? 100 : 0,
+    mode: testPassed ? 'passed' : 'failed',
+    hasE2E: true,
+    testFile,
+    testPassed,
+    testError,
+    e2eCandidates,
+    note: 'E2E specs are executed and contribute optional bonus points.'
   };
 }
 
@@ -497,25 +501,33 @@ async function runAiReview({ rootDir, courseConfig, challenge, challengeReadme, 
   }
 }
 
-function calculateTotalScore(layers, scoring) {
-  // Keep challenges at 0% until all scoped files are implemented (no placeholder/missing files).
+export function calculateTotalScore(layers, scoring) {
+  // Missing or failing scoped implementation/unit checks remain a hard failure.
   if (
     layers.functionalTests.score <= 0 ||
     layers.functionalTests.passedChecks < layers.functionalTests.totalChecks
   ) {
-    return 0;
+    return { score: 0, coreScore: 0 };
   }
 
   const safeScoring = normalizeScoring(scoring);
-  const total =
-    layers.functionalTests.score * safeScoring.functionalTests +
-    layers.codeQuality.score * safeScoring.codeQuality +
-    layers.architecture.score * safeScoring.architecture +
-    layers.bestPractices.score * safeScoring.bestPractices +
-    layers.e2eTests.score * safeScoring.e2eTests +
-    layers.aiReview.score * safeScoring.aiReview;
+  const coreKeys = ['functionalTests', 'codeQuality', 'architecture', 'bestPractices'];
+  const bonusKeys = ['e2eTests', 'aiReview'];
+  const coreWeight = coreKeys.reduce((total, key) => total + safeScoring[key], 0);
+  const weightedCore = coreKeys.reduce(
+    (total, key) => total + layers[key].score * safeScoring[key],
+    0
+  );
+  const coreScore = coreWeight > 0 ? roundScore(weightedCore / coreWeight) : 0;
+  const bonusScore = bonusKeys.reduce(
+    (total, key) => total + layers[key].score * safeScoring[key],
+    0
+  );
 
-  return roundScore(total);
+  return {
+    coreScore,
+    score: clampScore(roundScore(coreScore + bonusScore))
+  };
 }
 
 function mergeByChallengeOrder(existing, incoming, challengeOrder) {
@@ -666,7 +678,7 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
       codeQuality: runCodeQuality(files),
       architecture: runArchitectureChecks(files, metadata.patternsRequired || []),
       bestPractices: runBestPractices(files),
-      e2eTests: runE2ETests(projectDir, challenge.id),
+      e2eTests: runE2ETests(projectDir, challenge.id, courseId),
       aiReview: await runAiReview({
         rootDir,
         courseConfig,
@@ -676,8 +688,8 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
       })
     };
 
-    const score = calculateTotalScore(layers, courseConfig.scoring);
-    const passed = score >= (courseConfig.requirements?.minScore ?? 80);
+    const { score, coreScore } = calculateTotalScore(layers, courseConfig.scoring);
+    const passed = coreScore >= (courseConfig.requirements?.minScore ?? 80);
 
     freshResults.push({
       challengeId: challenge.id,
@@ -685,6 +697,7 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
       moduleId: challenge.moduleId,
       moduleName: challenge.moduleName,
       score,
+      coreScore,
       passed,
       layers,
       reviewedAt: new Date().toISOString()
