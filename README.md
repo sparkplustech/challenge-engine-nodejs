@@ -150,8 +150,8 @@ Other available backend courses:
 
 ```text
 courses/02-nodejs-core-fundamentals/project
-courses/03-express-rest-api/project
-courses/04-typescript-backend/project
+courses/03-express-rest-api-development/project
+courses/04-typescript-backend-development/project
 courses/05-nestjs-enterprise-framework/project
 ```
 

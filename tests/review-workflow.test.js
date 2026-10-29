@@ -4,7 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { resolveRepoRoot } from '../shared/utils/root.js';
-import { runCourseReview } from '../shared/review-engine/index.js';
+import { calculateTotalScore, runCourseReview } from '../shared/review-engine/index.js';
 import { updateProgress } from '../scripts/update-progress.js';
 import { getChangedChallenges } from '../scripts/get-changed-challenges.js';
 
@@ -15,6 +15,48 @@ function readJson(filePath) {
   return JSON.parse(raw);
 }
 
+test('E2E and AI scores add bonuses without lowering the core score', () => {
+  const scoring = {
+    functionalTests: 0.35,
+    codeQuality: 0.15,
+    architecture: 0.1,
+    bestPractices: 0.1,
+    e2eTests: 0.15,
+    aiReview: 0.15
+  };
+  const layers = {
+    functionalTests: { score: 80, passedChecks: 1, totalChecks: 1 },
+    codeQuality: { score: 80 },
+    architecture: { score: 80 },
+    bestPractices: { score: 80 },
+    e2eTests: { score: 0 },
+    aiReview: { score: 0 }
+  };
+
+  const withoutOptionalScores = calculateTotalScore(layers, scoring);
+  assert.equal(withoutOptionalScores.coreScore, 80);
+  assert.equal(withoutOptionalScores.score, 80);
+
+  const withOptionalScores = calculateTotalScore({
+    ...layers,
+    e2eTests: { score: 100 },
+    aiReview: { score: 100 }
+  }, scoring);
+  assert.equal(withOptionalScores.coreScore, 80);
+  assert.equal(withOptionalScores.score, 100);
+});
+
+test('incomplete functional checks remain a hard failure regardless of bonuses', () => {
+  const score = calculateTotalScore({
+    functionalTests: { score: 50, passedChecks: 0, totalChecks: 1 },
+    codeQuality: { score: 100 },
+    architecture: { score: 100 },
+    bestPractices: { score: 100 },
+    e2eTests: { score: 100 },
+    aiReview: { score: 100 }
+  }, {});
+  assert.deepEqual(score, { score: 0, coreScore: 0 });
+});
 test('single challenge review returns expected shape and preserves course result set', async () => {
   process.env.GROQ_API_KEY = '';
 
@@ -46,16 +88,18 @@ test('single challenge review returns expected shape and preserves course result
   const unitTs = join(ROOT, 'courses', courseId, 'project', 'tests', `challenge-${challengeId}.test.ts`);
   const e2eJs = join(ROOT, 'courses', courseId, 'project', 'tests', 'e2e', `challenge-${challengeId}.spec.js`);
   const e2eTs = join(ROOT, 'courses', courseId, 'project', 'tests', 'e2e', `challenge-${challengeId}.spec.ts`);
-  const testsConfigured = [unitJs, unitTs, e2eJs, e2eTs].some((path) => existsSync(path));
+  const e2eConfigured = [e2eJs, e2eTs].some((path) => existsSync(path));
 
-  if (!testsConfigured) {
+  if (!e2eConfigured) {
     assert.equal(reviewedChallenge?.layers?.e2eTests?.mode, 'not_configured');
-    assert.equal(reviewedChallenge?.layers?.e2eTests?.score, 100);
+    assert.equal(reviewedChallenge?.layers?.e2eTests?.score, 0);
   } else {
-    assert.equal(reviewedChallenge?.layers?.e2eTests?.mode, 'evidence');
-    assert.ok(reviewedChallenge?.layers?.e2eTests?.score >= 30);
-    assert.ok(reviewedChallenge?.layers?.e2eTests?.score <= 100);
+    assert.ok(['passed', 'failed'].includes(reviewedChallenge?.layers?.e2eTests?.mode));
+    assert.equal(reviewedChallenge?.layers?.e2eTests?.testPassed, reviewedChallenge?.layers?.e2eTests?.mode === 'passed');
+    assert.equal(reviewedChallenge?.layers?.e2eTests?.score, reviewedChallenge?.layers?.e2eTests?.testPassed ? 100 : 0);
   }
+  assert.equal(reviewedChallenge?.passed, reviewedChallenge?.coreScore >= 80);
+  assert.ok(reviewedChallenge?.score >= reviewedChallenge?.coreScore);
 
   assert.ok(run.summary.improvementAreas.length <= 4);
   assert.ok(!run.summary.improvementAreas.includes('classes'));
