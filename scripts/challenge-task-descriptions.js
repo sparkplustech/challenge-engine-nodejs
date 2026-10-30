@@ -91,8 +91,8 @@ export const CHALLENGE_GOALS = {
     'Expose `/health` or `/ready` endpoints that report service status.',
   '21-pagination-sorting-filter-contract':
     'Implement pagination, sorting, and filtering from `req.query` in list responses.',
-  '01-typed-primitives-functions':
-    'Add explicit TypeScript annotations to primitives, arrays, objects, and function signatures.',
+  '01-express-ts-migration-workflow':
+    'Migrate Express workflow to TypeScript with `ts-node` and `nodemon` scripts in `package.json`.',
   '02-interfaces-types-unions':
     'Use interfaces, type aliases, enums, tuples, and unions in a typed solver function.',
   '03-generics-guards-utility-types':
@@ -103,8 +103,8 @@ export const CHALLENGE_GOALS = {
     'Type Express handlers with `Request`, `Response`, and `NextFunction`.',
   '06-path-mapping-custom-types':
     'Use path alias imports (`@/...`) and custom type definitions in TypeScript.',
-  '07-express-ts-migration-workflow':
-    'Migrate Express workflow to TypeScript with `ts-node` and `nodemon` scripts in `package.json`.',
+  '07-typed-primitives-functions':
+    'Add explicit TypeScript annotations to primitives, arrays, objects, and function signatures.',
   '08-environment-schema-validation':
     'Validate `process.env` with a schema (Zod/Joi) and fail fast on invalid config.',
   '01-nest-modules-controllers-services':
@@ -408,10 +408,10 @@ export const CHALLENGE_TASK_STEPS = {
     'Apply pagination, sorting, and filtering to list responses in a consistent contract.',
     '**Clean up** — Remove all `TODO` and `throw new Error(\'Not implemented\')` placeholders before review.'
   ],
-  '01-typed-primitives-functions': [
-    '**Implement the solver** — Open `src/challenges/01-typed-primitives-functions/index.ts` and implement `solve_01_typed_primitives_functions`.',
-    'Add explicit TypeScript type annotations to primitives, arrays, objects, and function signatures.',
-    'Export the typed function with a clear return type.',
+  '01-express-ts-migration-workflow': [
+    '**Implement the solver** — Open `src/challenges/01-express-ts-migration-workflow/index.ts` and implement `solve_01_express_ts_migration_workflow`.',
+    'Update `package.json` in the project root with `ts-node` and `nodemon` dev workflow scripts.',
+    'Export typed Express migration helpers from the TypeScript entry file.',
     '**Clean up** — Remove all `TODO` and `throw new Error(\'Not implemented\')` placeholders before review.'
   ],
   '02-interfaces-types-unions': [
@@ -444,10 +444,10 @@ export const CHALLENGE_TASK_STEPS = {
     'Define custom type definitions for external or shared modules.',
     '**Clean up** — Remove all `TODO` and `throw new Error(\'Not implemented\')` placeholders before review.'
   ],
-  '07-express-ts-migration-workflow': [
-    '**Implement the solver** — Open `src/challenges/07-express-ts-migration-workflow/index.ts` and implement `solve_07_express_ts_migration_workflow`.',
-    'Update `package.json` in the same challenge folder with `ts-node` and `nodemon` dev workflow scripts.',
-    'Export typed Express migration helpers from the TypeScript entry file.',
+  '07-typed-primitives-functions': [
+    '**Implement the solver** — Open `src/challenges/07-typed-primitives-functions/index.ts` and implement `solve_07_typed_primitives_functions`.',
+    'Add explicit TypeScript type annotations to primitives, arrays, objects, and function signatures.',
+    'Export the typed function with a clear return type.',
     '**Clean up** — Remove all `TODO` and `throw new Error(\'Not implemented\')` placeholders before review.'
   ],
   '08-environment-schema-validation': [

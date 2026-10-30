@@ -31,21 +31,24 @@
   ],
   "challenges": [
     {
-      "id": "01-typed-primitives-functions",
-      "name": "Typed Primitives and Functions",
-      "moduleId": "m1-typescript-essentials",
-      "moduleName": "TypeScript Essentials",
-      "difficulty": "beginner",
-      "estimatedTime": "2 hours",
+      "id": "01-express-ts-migration-workflow",
+      "name": "Express TS Migration Workflow",
+      "moduleId": "m2-typescript-node-express",
+      "moduleName": "TypeScript with Node.js & Express",
+      "difficulty": "intermediate",
+      "estimatedTime": "4 hours",
       "skills": [
-        "type annotations",
-        "typed functions"
+        "Express to TypeScript migration",
+        "ts-node",
+        "nodemon workflow"
       ],
       "patternsRequired": [
-        "typeAnnotation"
+        "tsNodeScript",
+        "nodemonScript"
       ],
       "filesToCheck": [
-        "src/challenges/01-typed-primitives-functions/index.ts"
+        "src/challenges/01-express-ts-migration-workflow/index.ts",
+        "package.json"
       ]
     },
     {
@@ -151,24 +154,21 @@
       ]
     },
     {
-      "id": "07-express-ts-migration-workflow",
-      "name": "Express TS Migration Workflow",
-      "moduleId": "m2-typescript-node-express",
-      "moduleName": "TypeScript with Node.js & Express",
-      "difficulty": "intermediate",
-      "estimatedTime": "4 hours",
+      "id": "07-typed-primitives-functions",
+      "name": "Typed Primitives and Functions",
+      "moduleId": "m1-typescript-essentials",
+      "moduleName": "TypeScript Essentials",
+      "difficulty": "beginner",
+      "estimatedTime": "2 hours",
       "skills": [
-        "Express to TypeScript migration",
-        "ts-node",
-        "nodemon workflow"
+        "type annotations",
+        "typed functions"
       ],
       "patternsRequired": [
-        "tsNodeScript",
-        "nodemonScript"
+        "typeAnnotation"
       ],
       "filesToCheck": [
-        "src/challenges/07-express-ts-migration-workflow/index.ts",
-        "package.json"
+        "src/challenges/07-typed-primitives-functions/index.ts"
       ]
     },
     {
@@ -192,12 +192,12 @@
     }
   ],
   "scoring": {
-    "functionalTests": 0.35,
+    "functionalTests": 0.45,
     "codeQuality": 0.15,
     "architecture": 0.1,
     "bestPractices": 0.1,
-    "e2eTests": 0.15,
-    "aiReview": 0.15
+    "e2eTests": 0.1,
+    "aiReview": 0.1
   },
   "requirements": {
     "minScore": 80,

@@ -115,6 +115,30 @@ Repeat this once for every course you work on.
 
 ---
 
+## Step 7: Install Course Dependencies
+
+Install commands
+Run from the repo root; --prefix targets each course project.
+# 01
+npm install --prefix "courses/01-javascript-fundamentals-async/project" --save-dev nodemon
+
+# 02
+npm install --prefix "courses/02-nodejs-core-fundamentals/project" dotenv
+npm install --prefix "courses/02-nodejs-core-fundamentals/project" --save-dev nodemon
+npm install --prefix "courses/02-nodejs-core-fundamentals/project" lodash dayjs   # optional, ch14
+
+# 03 
+npm install --prefix "courses/03-express-rest-api-development/project" express cors pg mongoose jsonwebtoken bcrypt express-session cookie-parser zod express-rate-limit swagger-jsdoc swagger-ui-express ejs
+npm install --prefix "courses/03-express-rest-api-development/project" --save-dev jest supertest nodemon
+
+# 04 (First complete course :Express TS Migration Workflow before running)
+npm install --prefix "courses/04-typescript-backend-development/project" express zod
+npm install --prefix "courses/04-typescript-backend-development/project" --save-dev typescript ts-node nodemon @types/node @types/express tsconfig-paths
+
+# 05 
+npm install --prefix "courses/05-nestjs-enterprise-framework/project" @nestjs/common @nestjs/core @nestjs/platform-express reflect-metadata rxjs
+npm install --prefix "courses/05-nestjs-enterprise-framework/project" --save-dev typescript ts-node nodemon @types/node
+
 ## Step 7: Start the Dashboard
 
 Build the dashboard once:
@@ -150,8 +174,8 @@ Other available backend courses:
 
 ```text
 courses/02-nodejs-core-fundamentals/project
-courses/03-express-rest-api/project
-courses/04-typescript-backend/project
+courses/03-express-rest-api-development/project
+courses/04-typescript-backend-development/project
 courses/05-nestjs-enterprise-framework/project
 ```
 
