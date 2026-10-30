@@ -1,3 +1,10 @@
-// TODO: Implement supporting file for 07-express-ts-migration-workflow - Express TS Migration Workflow
-// File: package.json
-export {};
+{
+  "name": "04-typescript-backend-development-project",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node src/main.ts",
+    "dev": "nodemon --watch src --ext ts --exec \"ts-node src/main.ts\""
+  }
+}

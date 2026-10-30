@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "challengeId": "07-dotenv-script-automation",
+    "challengeName": "Dotenv Script Automation",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:53:35.252Z"
+  }
+]

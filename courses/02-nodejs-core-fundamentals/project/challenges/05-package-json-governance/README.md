@@ -14,6 +14,7 @@ Represent or validate `package.json` governance: dependencies, devDependencies, 
 2. Represent or validate `package.json` structure: dependencies, devDependencies, and npm `scripts`.
 3. Show how script automation is defined or consumed in your implementation.
 4. **Clean up** — Remove all `TODO` and `throw new Error('Not implemented')` placeholders before review.
+5. **Package Format** - const \<package_name\> = \` { <Package Details Here> } \`
 
 ## Code
 

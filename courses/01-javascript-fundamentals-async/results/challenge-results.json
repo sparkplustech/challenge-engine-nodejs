@@ -1,1 +1,534 @@
-[]
+[
+  {
+    "challengeId": "01-es6-syntax-foundations",
+    "challengeName": "ES6 Syntax Foundations",
+    "moduleId": "m1-modern-javascript-essentials",
+    "moduleName": "Modern JavaScript Essentials",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-01-es6-syntax-foundations.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "arrowFunction",
+          "destructuring",
+          "spreadOperator"
+        ],
+        "found": [
+          "arrowFunction",
+          "destructuring",
+          "spreadOperator"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-01-es6-syntax-foundations.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-01-es6-syntax-foundations.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-01-es6-syntax-foundations.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-01-es6-syntax-foundations.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:03:41.853Z"
+  },
+  {
+    "challengeId": "02-template-literal-string-lab",
+    "challengeName": "Template Literal String Lab",
+    "moduleId": "m1-modern-javascript-essentials",
+    "moduleName": "Modern JavaScript Essentials",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-02-template-literal-string-lab.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "templateLiteral"
+        ],
+        "found": [
+          "templateLiteral"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-02-template-literal-string-lab.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-02-template-literal-string-lab.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-02-template-literal-string-lab.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-02-template-literal-string-lab.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:05.550Z"
+  },
+  {
+    "challengeId": "03-array-methods-data-pipeline",
+    "challengeName": "Array Methods Data Pipeline",
+    "moduleId": "m1-modern-javascript-essentials",
+    "moduleName": "Modern JavaScript Essentials",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-03-array-methods-data-pipeline.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "arrayMap",
+          "arrayFilter",
+          "arrayReduce"
+        ],
+        "found": [
+          "arrayMap",
+          "arrayFilter",
+          "arrayReduce"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-03-array-methods-data-pipeline.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-03-array-methods-data-pipeline.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-03-array-methods-data-pipeline.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-03-array-methods-data-pipeline.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:09.880Z"
+  },
+  {
+    "challengeId": "04-oop-inheritance-refactor",
+    "challengeName": "OOP Inheritance Refactor",
+    "moduleId": "m1-modern-javascript-essentials",
+    "moduleName": "Modern JavaScript Essentials",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-04-oop-inheritance-refactor.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "classSyntax",
+          "extendsKeyword"
+        ],
+        "found": [
+          "classSyntax",
+          "extendsKeyword"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-04-oop-inheritance-refactor.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-04-oop-inheritance-refactor.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-04-oop-inheritance-refactor.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-04-oop-inheritance-refactor.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:15.164Z"
+  },
+  {
+    "challengeId": "05-module-system-conversion",
+    "challengeName": "Module System Conversion",
+    "moduleId": "m1-modern-javascript-essentials",
+    "moduleName": "Modern JavaScript Essentials",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-05-module-system-conversion.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "importStatement",
+          "exportStatement"
+        ],
+        "found": [
+          "importStatement",
+          "exportStatement"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-05-module-system-conversion.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-05-module-system-conversion.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-05-module-system-conversion.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-05-module-system-conversion.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:19.777Z"
+  },
+  {
+    "challengeId": "06-callback-hell-rescue",
+    "challengeName": "Callback Hell Rescue",
+    "moduleId": "m2-asynchronous-javascript-mastery",
+    "moduleName": "Asynchronous JavaScript Mastery",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-06-callback-hell-rescue.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "callbackFunction"
+        ],
+        "found": [
+          "callbackFunction"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-06-callback-hell-rescue.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-06-callback-hell-rescue.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-06-callback-hell-rescue.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-06-callback-hell-rescue.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:24.685Z"
+  },
+  {
+    "challengeId": "07-promises-chain-rejection-handling",
+    "challengeName": "Promises Chain Rejection Handling",
+    "moduleId": "m2-asynchronous-javascript-mastery",
+    "moduleName": "Asynchronous JavaScript Mastery",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-07-promises-chain-rejection-handling.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "promiseUsage",
+          "promiseCatch"
+        ],
+        "found": [
+          "promiseUsage",
+          "promiseCatch"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-07-promises-chain-rejection-handling.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-07-promises-chain-rejection-handling.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-07-promises-chain-rejection-handling.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-07-promises-chain-rejection-handling.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:30.254Z"
+  },
+  {
+    "challengeId": "08-async-await-event-loop-diagnostics",
+    "challengeName": "Async Await Event Loop Diagnostics",
+    "moduleId": "m2-asynchronous-javascript-mastery",
+    "moduleName": "Asynchronous JavaScript Mastery",
+    "score": 85,
+    "passed": true,
+    "layers": {
+      "functionalTests": {
+        "score": 100,
+        "totalChecks": 2,
+        "passedChecks": 2,
+        "failedFiles": [],
+        "testFile": "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-08-async-await-event-loop-diagnostics.test.js",
+        "testPassed": true,
+        "testError": null,
+        "note": "Functional checks include scoped file validation and challenge unit tests."
+      },
+      "codeQuality": {
+        "score": 100,
+        "errors": 0,
+        "warnings": 0,
+        "details": []
+      },
+      "architecture": {
+        "score": 100,
+        "required": [
+          "asyncFunction",
+          "awaitExpression",
+          "tryCatch",
+          "setTimeoutUsage"
+        ],
+        "found": [
+          "asyncFunction",
+          "awaitExpression",
+          "tryCatch",
+          "setTimeoutUsage"
+        ],
+        "missing": []
+      },
+      "bestPractices": {
+        "score": 100,
+        "issueCount": 0,
+        "issues": []
+      },
+      "e2eTests": {
+        "score": 100,
+        "mode": "evidence",
+        "hasUnit": true,
+        "hasE2E": true,
+        "unitCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-08-async-await-event-loop-diagnostics.test.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\challenge-08-async-await-event-loop-diagnostics.test.ts"
+        ],
+        "e2eCandidates": [
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-08-async-await-event-loop-diagnostics.spec.js",
+          "C:\\Users\\Aryan Bandodkar\\OneDrive\\Desktop\\ChallengeEngineWork\\challenge-engine-nodejs\\courses\\01-javascript-fundamentals-async\\project\\tests\\e2e\\challenge-08-async-await-event-loop-diagnostics.spec.ts"
+        ]
+      },
+      "aiReview": {
+        "score": 0,
+        "mode": "disabled",
+        "strengths": [],
+        "improvements": [
+          "Set GROQ_API_KEY to enable AI review."
+        ]
+      }
+    },
+    "reviewedAt": "2026-10-22T16:06:35.127Z"
+  }
+]

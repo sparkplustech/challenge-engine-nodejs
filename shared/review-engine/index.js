@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { execFileSync } from 'node:child_process';
 import { readJson, readText, writeJson, exists, clampScore, roundScore } from '../utils/io.js';
-import { loadDotEnv } from '../utils/env.js';
+import { loadChallengeEnv } from '../challenge-env.js';
 import { resolveRepoRoot } from '../utils/root.js';
 import {
   AVAILABLE_PATTERN_KEYS,
@@ -127,7 +127,7 @@ function getNodeTestArgs(courseId, testFile) {
     ? ['--import=reflect-metadata', '--import=tsx', '--test', testFile]
     : ['--experimental-strip-types', '--test', testFile];
 }
-function runFunctionalTests(files, projectDir, challengeId, courseId) {
+function runFunctionalTests(files, projectDir, challengeId, courseId, env = process.env) {
   const fileTotal = files.length;
   if (fileTotal === 0) {
     return {
@@ -158,6 +158,7 @@ function runFunctionalTests(files, projectDir, challengeId, courseId) {
       const testArgs = getNodeTestArgs(courseId, testFile);
       execFileSync('node', testArgs, {
         cwd: projectDir,
+        env,
         encoding: 'utf-8',
         stdio: 'pipe'
       });
@@ -372,9 +373,7 @@ function isEligibleForAi(files) {
   return totalChars >= 80;
 }
 
-async function runAiReview({ rootDir, courseConfig, challenge, challengeReadme, files }) {
-  loadDotEnv(rootDir);
-
+async function runAiReview({ courseConfig, challenge, challengeReadme, files }) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return {
@@ -652,6 +651,8 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
     throw new Error(`Course ${courseId} has no challenges configured.`);
   }
 
+  const challengeEnv = loadChallengeEnv(rootDir);
+
   const targets = challengeId
     ? courseConfig.challenges.filter((challenge) => challenge.id === challengeId)
     : courseConfig.challenges;
@@ -674,13 +675,12 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
     });
 
     const layers = {
-      functionalTests: runFunctionalTests(files, projectDir, challenge.id, courseId),
+      functionalTests: runFunctionalTests(files, projectDir, challenge.id, courseId, challengeEnv),
       codeQuality: runCodeQuality(files),
       architecture: runArchitectureChecks(files, metadata.patternsRequired || []),
       bestPractices: runBestPractices(files),
       e2eTests: runE2ETests(projectDir, challenge.id, courseId),
       aiReview: await runAiReview({
-        rootDir,
         courseConfig,
         challenge,
         challengeReadme,
