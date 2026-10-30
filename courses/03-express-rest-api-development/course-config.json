@@ -464,12 +464,12 @@
     }
   ],
   "scoring": {
-    "functionalTests": 0.35,
+    "functionalTests": 0.45,
     "codeQuality": 0.15,
     "architecture": 0.1,
     "bestPractices": 0.1,
-    "e2eTests": 0.15,
-    "aiReview": 0.15
+    "e2eTests": 0.1,
+    "aiReview": 0.1
   },
   "requirements": {
     "minScore": 80,
