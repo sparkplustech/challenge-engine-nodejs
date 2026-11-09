@@ -6,7 +6,7 @@
 
 ## Goal
 
-Load environment variables with `dotenv.config()` and wire `process.env` into application config.
+Practice loading configuration from environment files by calling `dotenv.config()` and wiring the resulting `process.env` values into your application settings.
 
 ## What to do
 

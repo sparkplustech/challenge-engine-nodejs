@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement custom middleware that calls `next()` and participates in the request lifecycle.
+Practice controlling an Express request as it travels through the app by writing custom middleware that inspects the request and calls `next()` to continue the chain.
 
 ## What to do
 

@@ -6,7 +6,7 @@
 
 ## Goal
 
-Perform file I/O with Node `fs` streams (`pipeline`, read/write streams) instead of loading whole files into memory.
+Practice reading and writing files efficiently by using Node.js streams to process data in chunks instead of loading an entire file into memory at once.
 
 ## What to do
 

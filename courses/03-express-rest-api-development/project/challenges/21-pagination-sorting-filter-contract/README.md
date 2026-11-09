@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement pagination, sorting, and filtering from `req.query` in list responses.
+Practice returning large collections in a predictable way by reading `page`, `limit`, `sort`, and `filter` values from `req.query` and applying them to list responses.
 
 ## What to do
 

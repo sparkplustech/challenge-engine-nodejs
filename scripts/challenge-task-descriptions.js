@@ -20,127 +20,127 @@ export const CHALLENGE_GOALS = {
   '08-async-await-event-loop-diagnostics':
     'Use `async`/`await`, `try/catch`, and `setTimeout` to demonstrate event-loop execution order.',
   '01-runtime-event-loop-visualizer':
-    'Visualize event-loop ordering by combining `setTimeout` and Promise scheduling in an exported solver.',
+    'Practice how Node.js schedules asynchronous code by running timers and Promises in a deliberate order, then recording the order in which each callback executes.',
   '02-fs-stream-buffer-operations':
-    'Perform file I/O with Node `fs` streams (`pipeline`, read/write streams) instead of loading whole files into memory.',
+    'Practice reading and writing files efficiently by using Node.js streams to process data in chunks instead of loading an entire file into memory at once.',
   '03-path-os-cross-platform-cli':
-    'Build cross-platform path helpers and system metadata using Node `path` and `os` modules.',
+    'Practice building cross-platform command-line helpers by using Node\'s `path` and `os` modules to create and inspect file paths and system information.',
   '04-process-worker-lifecycle':
-    'Demonstrate process lifecycle control with `process.env`/`process.argv` and child-process APIs.',
+    'Practice controlling a Node.js process by reading environment values and command-line arguments and by starting a child process with the built-in `child_process` APIs.',
   '05-package-json-governance':
-    'Represent or validate `package.json` governance: dependencies, devDependencies, and npm `scripts`.',
+    'Practice keeping a project\'s `package.json` healthy by representing its dependencies, devDependencies, and npm scripts in a small governance report.',
   '06-semver-lockfile-policy':
-    'Implement semver comparison or lockfile policy rules and return a clear policy outcome.',
+    'Practice applying semantic-versioning rules by comparing version ranges or lockfile policies and returning a clear decision about which versions are allowed.',
   '07-dotenv-script-automation':
-    'Load environment variables with `dotenv.config()` and wire `process.env` into application config.',
+    'Practice loading configuration from environment files by calling `dotenv.config()` and wiring the resulting `process.env` values into your application settings.',
   '08-native-http-routing-core':
-    'Build a native HTTP server with `http.createServer` and basic path-based routing.',
+    'Practice building a web server without a framework by using Node\'s `http.createServer` to create a server and route requests by URL path.',
   '09-query-headers-status-contract':
-    'Parse URLs with the `URL` class, read query params, and return explicit headers and status codes.',
+    'Practice handling the HTTP request/response contract by parsing URLs with the `URL` class, reading query parameters, and returning the correct headers and status codes.',
   '10-stream-based-transfer-service':
-    'Transfer data with stream pipelines for efficient large-file handling.',
+    'Practice moving large files efficiently by using stream pipelines to copy or transfer data without buffering the whole file in memory.',
   '11-operational-vs-programmer-errors':
-    'Classify operational vs programmer errors and handle recoverable failures with `try/catch`.',
+    'Practice telling recoverable operational errors apart from programmer bugs and handling each category appropriately with `try/catch`.',
   '12-debug-and-log-observability':
-    'Add structured logging (`console.info`/`warn`/`error` or a logger) for debug and observability.',
+    'Practice making an application easier to debug by adding structured logging with `console.info`/`warn`/`error` (or a logger) around the important steps.',
   '13-environment-specific-configuration':
-    'Branch configuration by environment using `dotenv` and `process.env`.',
+    'Practice supporting different deployment environments by loading `dotenv` values and branching configuration and behavior based on `process.env`.',
   '14-utility-libraries-and-package-publishing':
-    'Demonstrate utility-library patterns or package publishing conventions in a reusable module.',
+    'Practice reusing well-tested utility libraries and packaging code for others by building a small reusable helper module with tools such as `lodash` or `dayjs`.',
   '15-graceful-shutdown-signal-handling':
-    'Handle `SIGINT`/`SIGTERM` and implement graceful shutdown (for example `server.close()`).',
+    'Practice shutting a server down safely by listening for `SIGINT`/`SIGTERM` signals and releasing resources (for example with `server.close()`) before the process exits.',
   '01-express-app-bootstrap':
-    'Bootstrap an Express app with `express()` and export the configured application.',
+    'Practice creating an Express application from scratch by setting up an app instance, applying basic configuration, and exporting it so it can be started or tested.',
   '02-routing-params-query-handlers':
-    'Define Express routes with route params and query handlers using `express.Router()`.',
+    'Practice organizing Express routes by using `express.Router()` to define handlers that read route parameters (`req.params`) and query-string values (`req.query`).',
   '03-middleware-request-lifecycle':
-    'Implement custom middleware that calls `next()` and participates in the request lifecycle.',
+    'Practice controlling an Express request as it travels through the app by writing custom middleware that inspects the request and calls `next()` to continue the chain.',
   '04-rest-resource-design':
-    'Design RESTful resource routes (collection + item) with consistent URL and verb mapping.',
+    'Practice designing RESTful endpoints by modelling a resource as collection and item routes and mapping each URL and HTTP verb to the correct operation.',
   '05-http-method-status-formatting':
-    'Map HTTP methods to handlers with explicit `res.status(...)` codes and formatted JSON responses.',
+    'Practice returning predictable API responses by handling the common HTTP methods and using explicit `res.status(...)` codes with consistently formatted JSON bodies.',
   '06-versioning-cors-content-negotiation':
-    'Configure CORS, API versioning, and content negotiation (`Accept` headers) on an Express app.',
+    'Practice making an API safe to call from browsers and ready to evolve by configuring CORS, choosing a versioning strategy, and respecting `Accept` headers.',
   '07-postgres-pool-parameterized-queries':
-    'Query PostgreSQL with a connection pool and parameterized SQL (`$1`, `$2`, ...).',
+    'Practice querying PostgreSQL safely by using a connection pool and parameterized SQL values (`$1`, `$2`, ...) instead of pasting user input into query strings.',
   '08-mongoose-schema-model-validation':
-    'Define a Mongoose schema with validation and export a model.',
+    'Practice modelling MongoDB data with Mongoose by defining a schema with validation rules and exporting a model that enforces those rules.',
   '09-sql-vs-nosql-design-review':
-    'Model SQL vs NoSQL trade-offs and return structured design recommendations.',
+    'Practice choosing the right database for a feature by comparing SQL and NoSQL trade-offs and returning a structured recommendation.',
   '10-transaction-acid-n-plus-one-fix':
-    'Use database transactions and fix an N+1 query pattern with batched or joined queries.',
+    'Practice protecting multi-step database work by wrapping it in a transaction and by replacing an N+1 query pattern with a batched or joined query.',
   '11-jwt-refresh-token-auth':
-    'Implement JWT sign/verify flows with access and refresh token handling.',
+    'Practice building token-based authentication by signing and verifying JWTs with `jwt.sign`/`jwt.verify` and modelling access and refresh token flows.',
   '12-bcrypt-session-cookie-security':
-    'Hash passwords with bcrypt and configure secure session/cookie options.',
+    'Practice storing credentials safely by hashing and comparing passwords with `bcrypt` and by configuring secure session and cookie options.',
   '13-oauth-validation-sanitization':
-    'Validate and sanitize input (Joi/Zod) and include OAuth2-style flow patterns.',
+    'Practice protecting an API from bad input by validating and sanitizing request data with Joi or Zod and by modelling the key steps of an OAuth2-style flow.',
   '14-rate-limiting-ddos-protection':
-    'Protect routes with rate-limiting middleware to reduce abuse and DDoS risk.',
+    'Practice reducing abuse of an API by applying rate-limiting middleware that limits how many requests a client can make in a period of time.',
   '15-openapi-contract-documentation':
-    'Document API contracts with OpenAPI/Swagger artifacts and route metadata.',
+    'Practice documenting an API so other developers can use it by producing OpenAPI/Swagger contract details for at least one route\'s request and response.',
   '16-jest-unit-integration-tests':
-    'Write Jest unit or integration tests with `describe` and `it` blocks.',
+    'Practice writing automated tests by using Jest\'s `describe` and `it` blocks to check that a unit of code behaves as expected.',
   '17-coverage-mocking-versioned-api-tests':
-    'Test versioned HTTP routes with Supertest, mocks, and coverage-oriented cases.',
+    'Practice testing HTTP endpoints by using Supertest to send requests to an Express app, mocking slow or external dependencies and covering versioned routes.',
   '18-static-files-template-engines':
-    'Serve static files with `express.static` and configure a template view engine.',
+    'Practice serving more than JSON by using `express.static` for static assets and configuring a view engine (such as EJS) to render templates.',
   '19-https-tls-api-hardening':
-    'Create an HTTPS server with TLS hardening using `https.createServer`.',
+    'Practice serving an API over HTTPS by creating a TLS-enabled server with `https.createServer` and applying sensible security options.',
   '20-health-readiness-endpoints':
-    'Expose `/health` or `/ready` endpoints that report service status.',
+    'Practice making a service observable in production by exposing `/health` or `/ready` endpoints that report whether the app is running and able to serve traffic.',
   '21-pagination-sorting-filter-contract':
-    'Implement pagination, sorting, and filtering from `req.query` in list responses.',
+    'Practice returning large collections in a predictable way by reading `page`, `limit`, `sort`, and `filter` values from `req.query` and applying them to list responses.',
   '01-express-ts-migration-workflow':
-    'Migrate Express workflow to TypeScript with `ts-node` and `nodemon` scripts in `package.json`.',
+    'Practice moving an Express project to TypeScript by setting up `ts-node`/`nodemon` scripts in `package.json` and writing typed Express helper code.',
   '02-interfaces-types-unions':
-    'Use interfaces, type aliases, enums, tuples, and unions in a typed solver function.',
+    'Practice modelling data with TypeScript by defining interfaces, type aliases, enums, tuples, and union types for a small feature.',
   '03-generics-guards-utility-types':
-    'Write generics, a type guard, and utility types (`Partial`, `Pick`, etc.) in TypeScript.',
+    'Practice writing reusable, type-safe TypeScript by creating generic functions, narrowing values with a type guard, and using utility types such as `Partial` and `Pick`.',
   '04-tsconfig-node-setup':
-    'Demonstrate Node-oriented `tsconfig` `compilerOptions` in a typed challenge solution.',
+    'Practice configuring TypeScript for a Node.js project by explaining and demonstrating the important `compilerOptions` in a `tsconfig.json`.',
   '05-typed-express-request-response':
-    'Type Express handlers with `Request`, `Response`, and `NextFunction`.',
+    'Practice typing Express handlers by using the `Request`, `Response`, and `NextFunction` types so route parameters and responses are checked by TypeScript.',
   '06-path-mapping-custom-types':
-    'Use path alias imports (`@/...`) and custom type definitions in TypeScript.',
+    'Practice keeping imports clean in a TypeScript project by using a path alias such as `@/...` and adding custom type definitions for shared or external code.',
   '07-typed-primitives-functions':
-    'Add explicit TypeScript annotations to primitives, arrays, objects, and function signatures.',
+    'Practice making code safer with TypeScript by adding explicit types to primitives, arrays, objects, and function parameters and return values.',
   '08-environment-schema-validation':
-    'Validate `process.env` with a schema (Zod/Joi) and fail fast on invalid config.',
+    'Practice validating application configuration with TypeScript by checking `process.env` against a schema and failing fast when required values are missing or invalid.',
   '01-nest-modules-controllers-services':
-    'Define a Nest module, controller, and injectable service wired together.',
+    'Practice the three core NestJS building blocks by creating a module, a controller, and an injectable service, then connecting them so the controller can use the service.',
   '02-dependency-injection-providers':
-    'Implement Nest providers and constructor-based dependency injection.',
+    'Practice NestJS dependency injection by creating providers and injecting them into controllers or services through their constructors.',
   '03-middleware-guards-interceptors-pipes':
-    'Implement Nest guards and pipes in the request pipeline.',
+    'Practice controlling a NestJS request by implementing a guard and a pipe and showing where each one runs in the request pipeline.',
   '04-exception-filter-error-handling':
-    'Map exceptions to HTTP responses with a Nest exception filter.',
+    'Practice returning consistent errors from a NestJS API by implementing an exception filter that maps thrown errors to HTTP responses.',
   '05-custom-decorators-metadata-reflection':
-    'Create custom decorators and read metadata with reflection.',
+    'Practice extending NestJS with your own syntax by creating a custom decorator with `SetMetadata` or `createParamDecorator` and reading that metadata with `Reflector`.',
   '06-typeorm-prisma-repository-pattern':
-    'Implement repository-pattern data access with TypeORM or Prisma.',
+    'Practice keeping database code out of controllers by putting data access behind a repository or service boundary (for example with TypeORM or Prisma).',
   '07-validation-config-logging':
-    'Validate DTOs with `class-validator` and integrate config/logging in Nest.',
+    'Practice making a NestJS app production-ready by validating DTOs with `class-validator` and adding configuration and structured logging.',
   '08-passport-local-jwt-strategies':
-    'Implement Passport local and JWT strategies with `AuthGuard`.',
+    'Practice securing a NestJS API by implementing Passport local and JWT strategies and protecting routes with an `AuthGuard`.',
   '09-rbac-guards-route-protection':
-    'Enforce RBAC with role metadata and route guards.',
+    'Practice controlling who can call which route by attaching role metadata to handlers and enforcing it with a role-aware guard.',
   '10-refresh-token-api-key-auth':
-    'Handle refresh token rotation and API key authentication with JWT utilities.',
+    'Practice supporting long-lived sessions and service clients by adding refresh-token rotation and API-key authentication alongside JWT access tokens.',
   '11-microservices-architecture-patterns':
-    'Organize Nest modules for microservice boundaries and communication.',
+    'Practice splitting a NestJS application into services by organising modules around clear service boundaries and the messages they exchange.',
   '12-rabbitmq-redis-event-driven-flow':
-    'Model event-driven flows with message queues or event patterns.',
+    'Practice building event-driven communication by modelling a producer/consumer flow with message-queue or pub/sub patterns in NestJS.',
   '13-grpc-rest-interservice-bridge':
-    'Bridge REST and gRPC inter-service communication in Nest handlers.',
+    'Practice connecting two services that speak different protocols by adding gRPC handlers or a `ClientGrpc` client and bridging them to REST-style endpoints.',
   '14-unit-e2e-mocking-strategy':
-    'Write Nest unit and E2E tests with Jest, Supertest, and mocks.',
+    'Practice testing a NestJS application at two levels by writing unit tests with mocks and end-to-end tests with Supertest.',
   '15-coverage-reporting-tdd-cycle':
-    'Structure tests for coverage reporting and a TDD red/green cycle.',
+    'Practice measuring and improving test quality by structuring Jest suites for coverage reporting and following a red/green TDD cycle.',
   '16-service-discovery-basics':
-    'Represent service discovery or registry patterns for dynamic endpoints.',
+    'Practice letting services find each other at runtime by modelling a service registry or discovery helper that resolves endpoints dynamically.',
   '17-request-id-logging-interceptor':
-    'Propagate request/correlation IDs through an interceptor and structured logs.'
+    'Practice tracing a request through a NestJS app by generating or forwarding a request ID in an interceptor and including it in structured logs.'
 };
 
 export const CHALLENGE_TASK_STEPS = {

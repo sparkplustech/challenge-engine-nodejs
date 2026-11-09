@@ -6,7 +6,7 @@
 
 ## Goal
 
-Demonstrate utility-library patterns or package publishing conventions in a reusable module.
+Practice reusing well-tested utility libraries and packaging code for others by building a small reusable helper module with tools such as `lodash` or `dayjs`.
 
 ## What to do
 

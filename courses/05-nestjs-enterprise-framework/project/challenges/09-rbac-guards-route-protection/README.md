@@ -6,7 +6,7 @@
 
 ## Goal
 
-Enforce RBAC with role metadata and route guards.
+Practice controlling who can call which route by attaching role metadata to handlers and enforcing it with a role-aware guard.
 
 ## What to do
 

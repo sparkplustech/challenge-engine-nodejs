@@ -6,7 +6,7 @@
 
 ## Goal
 
-Hash passwords with bcrypt and configure secure session/cookie options.
+Practice storing credentials safely by hashing and comparing passwords with `bcrypt` and by configuring secure session and cookie options.
 
 ## What to do
 

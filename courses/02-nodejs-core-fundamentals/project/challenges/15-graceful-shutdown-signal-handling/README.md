@@ -6,7 +6,7 @@
 
 ## Goal
 
-Handle `SIGINT`/`SIGTERM` and implement graceful shutdown (for example `server.close()`).
+Practice shutting a server down safely by listening for `SIGINT`/`SIGTERM` signals and releasing resources (for example with `server.close()`) before the process exits.
 
 ## What to do
 

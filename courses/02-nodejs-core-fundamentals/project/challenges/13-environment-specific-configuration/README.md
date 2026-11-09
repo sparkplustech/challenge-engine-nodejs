@@ -6,7 +6,7 @@
 
 ## Goal
 
-Branch configuration by environment using `dotenv` and `process.env`.
+Practice supporting different deployment environments by loading `dotenv` values and branching configuration and behavior based on `process.env`.
 
 ## What to do
 

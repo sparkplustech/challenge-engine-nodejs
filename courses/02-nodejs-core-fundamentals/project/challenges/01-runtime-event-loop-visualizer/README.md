@@ -6,7 +6,7 @@
 
 ## Goal
 
-Visualize event-loop ordering by combining `setTimeout` and Promise scheduling in an exported solver.
+Practice how Node.js schedules asynchronous code by running timers and Promises in a deliberate order, then recording the order in which each callback executes.
 
 ## What to do
 

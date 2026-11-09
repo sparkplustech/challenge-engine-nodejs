@@ -6,7 +6,7 @@
 
 ## Goal
 
-Bridge REST and gRPC inter-service communication in Nest handlers.
+Practice connecting two services that speak different protocols by adding gRPC handlers or a `ClientGrpc` client and bridging them to REST-style endpoints.
 
 ## What to do
 

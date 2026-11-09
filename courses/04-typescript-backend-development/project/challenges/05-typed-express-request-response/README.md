@@ -6,7 +6,7 @@
 
 ## Goal
 
-Type Express handlers with `Request`, `Response`, and `NextFunction`.
+Practice typing Express handlers by using the `Request`, `Response`, and `NextFunction` types so route parameters and responses are checked by TypeScript.
 
 ## What to do
 

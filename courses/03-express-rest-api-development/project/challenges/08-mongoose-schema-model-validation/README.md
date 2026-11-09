@@ -6,7 +6,7 @@
 
 ## Goal
 
-Define a Mongoose schema with validation and export a model.
+Practice modelling MongoDB data with Mongoose by defining a schema with validation rules and exporting a model that enforces those rules.
 
 ## What to do
 

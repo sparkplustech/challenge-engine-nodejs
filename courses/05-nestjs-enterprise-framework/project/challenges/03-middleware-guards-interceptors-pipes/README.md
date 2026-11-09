@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement Nest guards and pipes in the request pipeline.
+Practice controlling a NestJS request by implementing a guard and a pipe and showing where each one runs in the request pipeline.
 
 ## What to do
 

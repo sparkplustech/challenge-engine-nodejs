@@ -6,7 +6,7 @@
 
 ## Goal
 
-Build cross-platform path helpers and system metadata using Node `path` and `os` modules.
+Practice building cross-platform command-line helpers by using Node's `path` and `os` modules to create and inspect file paths and system information.
 
 ## What to do
 

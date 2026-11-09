@@ -6,7 +6,7 @@
 
 ## Goal
 
-Map HTTP methods to handlers with explicit `res.status(...)` codes and formatted JSON responses.
+Practice returning predictable API responses by handling the common HTTP methods and using explicit `res.status(...)` codes with consistently formatted JSON bodies.
 
 ## What to do
 

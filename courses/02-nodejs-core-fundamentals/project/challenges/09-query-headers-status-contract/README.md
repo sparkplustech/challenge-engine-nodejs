@@ -6,7 +6,7 @@
 
 ## Goal
 
-Parse URLs with the `URL` class, read query params, and return explicit headers and status codes.
+Practice handling the HTTP request/response contract by parsing URLs with the `URL` class, reading query parameters, and returning the correct headers and status codes.
 
 ## What to do
 

@@ -6,7 +6,7 @@
 
 ## Goal
 
-Create custom decorators and read metadata with reflection.
+Practice extending NestJS with your own syntax by creating a custom decorator with `SetMetadata` or `createParamDecorator` and reading that metadata with `Reflector`.
 
 ## What to do
 

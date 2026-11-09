@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement Nest providers and constructor-based dependency injection.
+Practice NestJS dependency injection by creating providers and injecting them into controllers or services through their constructors.
 
 ## What to do
 

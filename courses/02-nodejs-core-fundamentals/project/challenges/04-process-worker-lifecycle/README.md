@@ -6,7 +6,7 @@
 
 ## Goal
 
-Demonstrate process lifecycle control with `process.env`/`process.argv` and child-process APIs.
+Practice controlling a Node.js process by reading environment values and command-line arguments and by starting a child process with the built-in `child_process` APIs.
 
 ## What to do
 

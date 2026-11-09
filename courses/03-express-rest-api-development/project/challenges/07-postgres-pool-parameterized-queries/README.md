@@ -6,7 +6,7 @@
 
 ## Goal
 
-Query PostgreSQL with a connection pool and parameterized SQL (`$1`, `$2`, ...).
+Practice querying PostgreSQL safely by using a connection pool and parameterized SQL values (`$1`, `$2`, ...) instead of pasting user input into query strings.
 
 ## What to do
 

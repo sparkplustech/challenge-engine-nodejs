@@ -6,7 +6,7 @@
 
 ## Goal
 
-Represent or validate `package.json` governance: dependencies, devDependencies, and npm `scripts`.
+Practice keeping a project's `package.json` healthy by representing its dependencies, devDependencies, and npm scripts in a small governance report.
 
 ## What to do
 

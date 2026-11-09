@@ -6,7 +6,7 @@
 
 ## Goal
 
-Migrate Express workflow to TypeScript with `ts-node` and `nodemon` scripts in `package.json`.
+Practice moving an Express project to TypeScript by setting up `ts-node`/`nodemon` scripts in `package.json` and writing typed Express helper code.
 
 ## What to do
 

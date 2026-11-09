@@ -6,7 +6,7 @@
 
 ## Goal
 
-Add structured logging (`console.info`/`warn`/`error` or a logger) for debug and observability.
+Practice making an application easier to debug by adding structured logging with `console.info`/`warn`/`error` (or a logger) around the important steps.
 
 ## What to do
 

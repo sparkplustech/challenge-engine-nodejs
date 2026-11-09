@@ -6,7 +6,7 @@
 
 ## Goal
 
-Add explicit TypeScript annotations to primitives, arrays, objects, and function signatures.
+Practice making code safer with TypeScript by adding explicit types to primitives, arrays, objects, and function parameters and return values.
 
 ## What to do
 

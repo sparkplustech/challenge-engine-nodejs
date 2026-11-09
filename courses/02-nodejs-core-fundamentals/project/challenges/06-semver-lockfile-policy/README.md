@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement semver comparison or lockfile policy rules and return a clear policy outcome.
+Practice applying semantic-versioning rules by comparing version ranges or lockfile policies and returning a clear decision about which versions are allowed.
 
 ## What to do
 

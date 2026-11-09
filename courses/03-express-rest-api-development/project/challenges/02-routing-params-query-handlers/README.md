@@ -6,7 +6,7 @@
 
 ## Goal
 
-Define Express routes with route params and query handlers using `express.Router()`.
+Practice organizing Express routes by using `express.Router()` to define handlers that read route parameters (`req.params`) and query-string values (`req.query`).
 
 ## What to do
 

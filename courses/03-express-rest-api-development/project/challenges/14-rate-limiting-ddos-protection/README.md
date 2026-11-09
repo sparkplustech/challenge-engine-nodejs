@@ -6,7 +6,7 @@
 
 ## Goal
 
-Protect routes with rate-limiting middleware to reduce abuse and DDoS risk.
+Practice reducing abuse of an API by applying rate-limiting middleware that limits how many requests a client can make in a period of time.
 
 ## What to do
 
