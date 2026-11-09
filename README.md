@@ -133,11 +133,11 @@ npm install --prefix "courses/03-express-rest-api-development/project" --save-de
 
 # 04 (First complete course :Express TS Migration Workflow before running)
 npm install --prefix "courses/04-typescript-backend-development/project" express zod
-npm install --prefix "courses/04-typescript-backend-development/project" --save-dev typescript ts-node nodemon @types/node @types/express tsconfig-paths
+npm install --prefix "courses/04-typescript-backend-development/project" --save-dev typescript tsx ts-node nodemon @types/node @types/express tsconfig-paths
 
 # 05 
 npm install --prefix "courses/05-nestjs-enterprise-framework/project" @nestjs/common @nestjs/core @nestjs/platform-express reflect-metadata rxjs
-npm install --prefix "courses/05-nestjs-enterprise-framework/project" --save-dev typescript ts-node nodemon @types/node
+npm install --prefix "courses/05-nestjs-enterprise-framework/project" --save-dev typescript tsx ts-node nodemon @types/node
 
 ## Step 7: Start the Dashboard
 
