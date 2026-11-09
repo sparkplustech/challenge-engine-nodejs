@@ -6,7 +6,7 @@
 
 ## Goal
 
-Organize Nest modules for microservice boundaries and communication.
+Practice splitting a NestJS application into services by organising modules around clear service boundaries and the messages they exchange.
 
 ## What to do
 

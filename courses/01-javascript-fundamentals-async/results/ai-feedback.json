@@ -1,1 +1,90 @@
-[]
+[
+  {
+    "challengeId": "01-es6-syntax-foundations",
+    "challengeName": "ES6 Syntax Foundations",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:03:41.853Z"
+  },
+  {
+    "challengeId": "02-template-literal-string-lab",
+    "challengeName": "Template Literal String Lab",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:05.550Z"
+  },
+  {
+    "challengeId": "03-array-methods-data-pipeline",
+    "challengeName": "Array Methods Data Pipeline",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:09.880Z"
+  },
+  {
+    "challengeId": "04-oop-inheritance-refactor",
+    "challengeName": "OOP Inheritance Refactor",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:15.164Z"
+  },
+  {
+    "challengeId": "05-module-system-conversion",
+    "challengeName": "Module System Conversion",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:19.777Z"
+  },
+  {
+    "challengeId": "06-callback-hell-rescue",
+    "challengeName": "Callback Hell Rescue",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:24.685Z"
+  },
+  {
+    "challengeId": "07-promises-chain-rejection-handling",
+    "challengeName": "Promises Chain Rejection Handling",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:30.254Z"
+  },
+  {
+    "challengeId": "08-async-await-event-loop-diagnostics",
+    "challengeName": "Async Await Event Loop Diagnostics",
+    "score": 0,
+    "mode": "disabled",
+    "strengths": [],
+    "improvements": [
+      "Set GROQ_API_KEY to enable AI review."
+    ],
+    "reviewedAt": "2026-10-22T16:06:35.127Z"
+  }
+]

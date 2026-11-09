@@ -1,12 +1,12 @@
 {
-  "challengeId": "01-typed-primitives-functions",
+  "challengeId": "07-typed-primitives-functions",
   "challengeName": "Typed Primitives and Functions",
   "moduleId": "m1-typescript-essentials",
   "moduleName": "TypeScript Essentials",
   "difficulty": "beginner",
   "estimatedTime": "2 hours",
   "filesToCheck": [
-    "src/challenges/01-typed-primitives-functions/index.ts"
+    "src/challenges/07-typed-primitives-functions/index.ts"
   ],
   "skills": [
     "type annotations",

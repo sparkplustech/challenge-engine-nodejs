@@ -6,7 +6,7 @@
 
 ## Goal
 
-Validate `process.env` with a schema (Zod/Joi) and fail fast on invalid config.
+Practice validating application configuration with TypeScript by checking `process.env` against a schema and failing fast when required values are missing or invalid.
 
 ## What to do
 

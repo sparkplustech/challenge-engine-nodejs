@@ -6,7 +6,7 @@
 
 ## Goal
 
-Test versioned HTTP routes with Supertest, mocks, and coverage-oriented cases.
+Practice testing HTTP endpoints by using Supertest to send requests to an Express app, mocking slow or external dependencies and covering versioned routes.
 
 ## What to do
 

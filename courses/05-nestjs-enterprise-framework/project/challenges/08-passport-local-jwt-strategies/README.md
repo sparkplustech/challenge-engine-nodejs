@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement Passport local and JWT strategies with `AuthGuard`.
+Practice securing a NestJS API by implementing Passport local and JWT strategies and protecting routes with an `AuthGuard`.
 
 ## What to do
 

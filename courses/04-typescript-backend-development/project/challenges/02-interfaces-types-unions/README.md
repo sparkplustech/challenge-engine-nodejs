@@ -6,7 +6,7 @@
 
 ## Goal
 
-Use interfaces, type aliases, enums, tuples, and unions in a typed solver function.
+Practice modelling data with TypeScript by defining interfaces, type aliases, enums, tuples, and union types for a small feature.
 
 ## What to do
 

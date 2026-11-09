@@ -6,7 +6,7 @@
 
 ## Goal
 
-Build a native HTTP server with `http.createServer` and basic path-based routing.
+Practice building a web server without a framework by using Node's `http.createServer` to create a server and route requests by URL path.
 
 ## What to do
 

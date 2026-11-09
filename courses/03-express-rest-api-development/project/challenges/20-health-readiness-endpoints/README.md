@@ -6,7 +6,7 @@
 
 ## Goal
 
-Expose `/health` or `/ready` endpoints that report service status.
+Practice making a service observable in production by exposing `/health` or `/ready` endpoints that report whether the app is running and able to serve traffic.
 
 ## What to do
 

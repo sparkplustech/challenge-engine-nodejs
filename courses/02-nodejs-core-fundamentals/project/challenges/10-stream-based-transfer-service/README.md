@@ -6,7 +6,7 @@
 
 ## Goal
 
-Transfer data with stream pipelines for efficient large-file handling.
+Practice moving large files efficiently by using stream pipelines to copy or transfer data without buffering the whole file in memory.
 
 ## What to do
 

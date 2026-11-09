@@ -6,7 +6,7 @@
 
 ## Goal
 
-Bootstrap an Express app with `express()` and export the configured application.
+Practice creating an Express application from scratch by setting up an app instance, applying basic configuration, and exporting it so it can be started or tested.
 
 ## What to do
 

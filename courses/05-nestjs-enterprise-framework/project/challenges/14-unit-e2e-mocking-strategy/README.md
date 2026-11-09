@@ -6,7 +6,7 @@
 
 ## Goal
 
-Write Nest unit and E2E tests with Jest, Supertest, and mocks.
+Practice testing a NestJS application at two levels by writing unit tests with mocks and end-to-end tests with Supertest.
 
 ## What to do
 

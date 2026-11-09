@@ -6,7 +6,7 @@
 
 ## Goal
 
-Structure tests for coverage reporting and a TDD red/green cycle.
+Practice measuring and improving test quality by structuring Jest suites for coverage reporting and following a red/green TDD cycle.
 
 ## What to do
 

@@ -6,7 +6,7 @@
 
 ## Goal
 
-Propagate request/correlation IDs through an interceptor and structured logs.
+Practice tracing a request through a NestJS app by generating or forwarding a request ID in an interceptor and including it in structured logs.
 
 ## What to do
 

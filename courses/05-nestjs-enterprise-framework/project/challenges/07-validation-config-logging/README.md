@@ -6,7 +6,7 @@
 
 ## Goal
 
-Validate DTOs with `class-validator` and integrate config/logging in Nest.
+Practice making a NestJS app production-ready by validating DTOs with `class-validator` and adding configuration and structured logging.
 
 ## What to do
 

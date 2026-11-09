@@ -1,11 +1,88 @@
 {
   "courseId": "01-javascript-fundamentals-async",
   "courseName": "JavaScript Fundamentals & Async Programming",
-  "averageScore": 0,
-  "completionPercentage": 0,
+  "averageScore": 85,
+  "completionPercentage": 100,
   "totalChallenges": 8,
-  "completedChallenges": 0,
-  "badgeLevel": "none",
-  "challengeResults": [],
-  "generatedAt": "2026-08-06T12:50:02.059Z"
+  "completedChallenges": 8,
+  "reviewedChallengesCount": 8,
+  "badgeLevel": "silver",
+  "challengeResults": [
+    {
+      "challengeId": "01-es6-syntax-foundations",
+      "challengeName": "ES6 Syntax Foundations",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:03:41.853Z"
+    },
+    {
+      "challengeId": "02-template-literal-string-lab",
+      "challengeName": "Template Literal String Lab",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:05.550Z"
+    },
+    {
+      "challengeId": "03-array-methods-data-pipeline",
+      "challengeName": "Array Methods Data Pipeline",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:09.880Z"
+    },
+    {
+      "challengeId": "04-oop-inheritance-refactor",
+      "challengeName": "OOP Inheritance Refactor",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:15.164Z"
+    },
+    {
+      "challengeId": "05-module-system-conversion",
+      "challengeName": "Module System Conversion",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:19.777Z"
+    },
+    {
+      "challengeId": "06-callback-hell-rescue",
+      "challengeName": "Callback Hell Rescue",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:24.685Z"
+    },
+    {
+      "challengeId": "07-promises-chain-rejection-handling",
+      "challengeName": "Promises Chain Rejection Handling",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:30.254Z"
+    },
+    {
+      "challengeId": "08-async-await-event-loop-diagnostics",
+      "challengeName": "Async Await Event Loop Diagnostics",
+      "score": 85,
+      "passed": true,
+      "reviewedAt": "2026-10-22T16:06:35.127Z"
+    }
+  ],
+  "skillStrengths": [
+    "let/const",
+    "arrow functions",
+    "destructuring",
+    "spread/rest",
+    "template literals",
+    "string manipulation",
+    "map",
+    "filter",
+    "reduce",
+    "forEach",
+    "find",
+    "classes"
+  ],
+  "improvementAreas": [],
+  "aiStrengths": [],
+  "aiImprovements": [
+    "Set GROQ_API_KEY to enable AI review."
+  ],
+  "generatedAt": "2026-10-22T16:06:35.128Z"
 }

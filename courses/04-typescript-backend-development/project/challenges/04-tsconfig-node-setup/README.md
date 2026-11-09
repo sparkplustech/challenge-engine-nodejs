@@ -6,7 +6,7 @@
 
 ## Goal
 
-Demonstrate Node-oriented `tsconfig` `compilerOptions` in a typed challenge solution.
+Practice configuring TypeScript for a Node.js project by explaining and demonstrating the important `compilerOptions` in a `tsconfig.json`.
 
 ## What to do
 

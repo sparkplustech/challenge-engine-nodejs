@@ -6,7 +6,7 @@
 
 ## Goal
 
-Model SQL vs NoSQL trade-offs and return structured design recommendations.
+Practice choosing the right database for a feature by comparing SQL and NoSQL trade-offs and returning a structured recommendation.
 
 ## What to do
 

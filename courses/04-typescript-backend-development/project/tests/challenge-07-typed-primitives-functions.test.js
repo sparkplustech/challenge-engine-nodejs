@@ -14,9 +14,9 @@ import {
   solverImportUrl
 } from '../../../../shared/challenge-test-helpers/index.js';
 
-const challengeId = '01-typed-primitives-functions';
-const sourceFile = 'src/challenges/01-typed-primitives-functions/index.ts';
-const solverName = 'solve_01_typed_primitives_functions';
+const challengeId = '07-typed-primitives-functions';
+const sourceFile = 'src/challenges/07-typed-primitives-functions/index.ts';
+const solverName = 'solve_07_typed_primitives_functions';
 const source = readFileSync(new URL(`../${sourceFile}`, import.meta.url), 'utf-8');
 const patternsRequired = ['typeAnnotation'];
 
@@ -34,10 +34,10 @@ test('uses TypeScript type annotations on primitives and functions', () => {
   );
 });
 
-test('exports solve_01_typed_primitives_functions from scoped source', () => {
+test('exports solve_07_typed_primitives_functions from scoped source', () => {
   assert.match(
     source,
-    /export\s+(async\s+)?function\s+solve_01_typed_primitives_functions\b/,
+    /export\s+(async\s+)?function\s+solve_07_typed_primitives_functions\b/,
     'expected exported solver function in scoped source'
   );
 });

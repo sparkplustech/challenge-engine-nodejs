@@ -6,7 +6,7 @@
 
 ## Goal
 
-Use database transactions and fix an N+1 query pattern with batched or joined queries.
+Practice protecting multi-step database work by wrapping it in a transaction and by replacing an N+1 query pattern with a batched or joined query.
 
 ## What to do
 

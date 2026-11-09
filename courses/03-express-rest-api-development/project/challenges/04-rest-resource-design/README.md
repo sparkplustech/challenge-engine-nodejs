@@ -6,7 +6,7 @@
 
 ## Goal
 
-Design RESTful resource routes (collection + item) with consistent URL and verb mapping.
+Practice designing RESTful endpoints by modelling a resource as collection and item routes and mapping each URL and HTTP verb to the correct operation.
 
 ## What to do
 

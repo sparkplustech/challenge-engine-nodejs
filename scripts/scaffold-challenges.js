@@ -114,6 +114,15 @@ function writeText(filePath, content, allowOverwrite = false) {
   return true;
 }
 
+function buildProjectEnv(courseConfig) {
+  return [
+    `APP_NAME=${courseConfig.courseName}`,
+    'PORT=3000',
+    'NODE_ENV=development',
+    ''
+  ].join('\n');
+}
+
 function buildProjectReadme(courseConfig) {
   const moduleLines = courseConfig.modules
     .map((module) => {
@@ -278,6 +287,72 @@ function buildSourceStub(challenge, ext) {
   return `// TODO: Implement ${challenge.id} - ${challenge.name}\nexport function solve_${challenge.id.replace(/-/g, '_')}() {\n  throw new Error('Not implemented');\n}\n`;
 }
 
+const COURSE_PROJECT_DEPENDENCIES = {
+  '01-javascript-fundamentals-async': {
+    dependencies: {},
+    devDependencies: { nodemon: '^3.1.14' }
+  },
+  '02-nodejs-core-fundamentals': {
+    dependencies: {
+      dayjs: '^1.11.23',
+      dotenv: '^16.6.1',
+      lodash: '^4.18.1'
+    },
+    devDependencies: { nodemon: '^3.1.14' }
+  },
+  '03-express-rest-api-development': {
+    dependencies: {
+      bcrypt: '^6.0.0',
+      'cookie-parser': '^1.4.7',
+      cors: '^2.8.6',
+      ejs: '^3.1.10',
+      express: '^5.3.0',
+      'express-rate-limit': '^8.7.3',
+      'express-session': '^1.19.0',
+      jsonwebtoken: '^9.0.3',
+      mongoose: '^9.12.0',
+      pg: '^8.23.1',
+      'swagger-jsdoc': '^6.3.0',
+      'swagger-ui-express': '^5.0.1',
+      zod: '^4.6.7'
+    },
+    devDependencies: {
+      jest: '^30.5.2',
+      nodemon: '^3.1.14',
+      supertest: '^7.3.2'
+    }
+  },
+  '04-typescript-backend-development': {
+    dependencies: {
+      express: '^5.3.0',
+      zod: '^4.6.7'
+    },
+    devDependencies: {
+      '@types/express': '^5.0.6',
+      '@types/node': '^24.0.0',
+      nodemon: '^3.1.14',
+      'ts-node': '^10.9.2',
+      'tsconfig-paths': '^4.2.0',
+      tsx: '^4.20.6',
+      typescript: '^6.0.3'
+    }
+  },
+  '05-nestjs-enterprise-framework': {
+    dependencies: {
+      '@nestjs/common': '^11.1.0',
+      '@nestjs/core': '^11.1.0',
+      '@nestjs/platform-express': '^11.1.0',
+      'reflect-metadata': '^0.2.2',
+      rxjs: '^7.8.2'
+    },
+    devDependencies: {
+      '@types/node': '^24.0.0',
+      tsx: '^4.20.6',
+      typescript: '^6.0.3'
+    }
+  }
+};
+
 function buildProjectPackage(courseConfig, ext) {
   const base = {
     name: `${courseConfig.courseId}-project`,
@@ -286,23 +361,36 @@ function buildProjectPackage(courseConfig, ext) {
     type: 'module'
   };
 
+  const { dependencies, devDependencies } = COURSE_PROJECT_DEPENDENCIES[courseConfig.courseId] ?? {
+    dependencies: {},
+    devDependencies: {}
+  };
+
+  let scripts;
   if (ext === 'ts') {
-    return {
-      ...base,
-      scripts: {
-        start: 'ts-node src/main.ts',
-        dev: 'nodemon --watch src --ext ts --exec \"ts-node src/main.ts\"'
-      }
+    scripts =
+      courseConfig.courseId === '05-nestjs-enterprise-framework'
+        ? { start: 'tsx src/main.ts', dev: 'tsx watch src/main.ts' }
+        : {
+            start: 'tsx src/main.ts',
+            dev: 'nodemon --watch src --ext ts --exec "tsx src/main.ts"'
+          };
+  } else {
+    scripts = {
+      start: 'node src/main.js',
+      dev: 'nodemon src/main.js'
     };
   }
 
-  return {
-    ...base,
-    scripts: {
-      start: 'node src/main.js',
-      dev: 'nodemon src/main.js'
-    }
-  };
+  const projectPackage = { ...base, scripts };
+  if (Object.keys(dependencies).length > 0) {
+    projectPackage.dependencies = dependencies;
+  }
+  if (Object.keys(devDependencies).length > 0) {
+    projectPackage.devDependencies = devDependencies;
+  }
+
+  return projectPackage;
 }
 
 function buildReviewEngineStub(courseId) {
@@ -349,6 +437,17 @@ function runScaffold() {
 
     const projectReadmePath = join(courseDir, 'project', 'README.md');
     if (writeText(projectReadmePath, buildProjectReadme(courseConfig), force)) {
+      createdCount += 1;
+    }
+
+    const projectEnv = buildProjectEnv(courseConfig);
+    const envExamplePath = join(courseDir, 'project', '.env.example');
+    if (writeText(envExamplePath, projectEnv, force)) {
+      createdCount += 1;
+    }
+
+    const envPath = join(courseDir, 'project', '.env');
+    if (writeText(envPath, projectEnv)) {
       createdCount += 1;
     }
 
@@ -444,5 +543,12 @@ if (isMain) {
   }
 }
 
-export { runScaffold, buildChallengeReadme, solveFunctionName, buildSourceStub, buildCourseSummarySeed };
+export {
+  runScaffold,
+  buildChallengeReadme,
+  buildProjectPackage,
+  solveFunctionName,
+  buildSourceStub,
+  buildCourseSummarySeed
+};
 

@@ -14,13 +14,13 @@ import {
   solverImportUrl
 } from '../../../../shared/challenge-test-helpers/index.js';
 
-const challengeId = '07-express-ts-migration-workflow';
+const challengeId = '01-express-ts-migration-workflow';
 const filesToCheck = [
-  'src/challenges/07-express-ts-migration-workflow/index.ts',
+  'src/challenges/01-express-ts-migration-workflow/index.ts',
   'package.json'
 ];
 const sourceFile = filesToCheck[0];
-const solverName = 'solve_07_express_ts_migration_workflow';
+const solverName = 'solve_01_express_ts_migration_workflow';
 const combinedSource = filesToCheck
   .map((file) => readFileSync(new URL(`../${file}`, import.meta.url), 'utf-8'))
   .join('\n');
@@ -50,10 +50,10 @@ test('configures ts-node and nodemon scripts for Express TypeScript migration', 
   );
 });
 
-test('exports solve_07_express_ts_migration_workflow from scoped source', () => {
+test('exports solve_01_express_ts_migration_workflow from scoped source', () => {
   assert.match(
     combinedSource,
-    /export\s+(async\s+)?function\s+solve_07_express_ts_migration_workflow\b/,
+    /export\s+(async\s+)?function\s+solve_01_express_ts_migration_workflow\b/,
     'expected exported solver function in scoped source'
   );
 });

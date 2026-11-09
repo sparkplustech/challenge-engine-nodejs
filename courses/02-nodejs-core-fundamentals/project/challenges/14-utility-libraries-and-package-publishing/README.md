@@ -6,7 +6,7 @@
 
 ## Goal
 
-Demonstrate utility-library patterns or package publishing conventions in a reusable module.
+Practice reusing well-tested utility libraries and packaging code for others by building a small reusable helper module with tools such as `lodash` or `dayjs`.
 
 ## What to do
 
@@ -14,6 +14,7 @@ Demonstrate utility-library patterns or package publishing conventions in a reus
 2. Demonstrate utility library usage (for example lodash/dayjs patterns) or package publishing conventions.
 3. Export a reusable helper or module surface from the scoped file.
 4. **Clean up** — Remove all `TODO` and `throw new Error('Not implemented')` placeholders before review.
+5. **Package Format** - const \<package_name\> = \` { <Package Details Here> } \`
 
 ## Code
 

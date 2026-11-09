@@ -6,7 +6,7 @@
 
 ## Goal
 
-Model event-driven flows with message queues or event patterns.
+Practice building event-driven communication by modelling a producer/consumer flow with message-queue or pub/sub patterns in NestJS.
 
 ## What to do
 

@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement JWT sign/verify flows with access and refresh token handling.
+Practice building token-based authentication by signing and verifying JWTs with `jwt.sign`/`jwt.verify` and modelling access and refresh token flows.
 
 ## What to do
 

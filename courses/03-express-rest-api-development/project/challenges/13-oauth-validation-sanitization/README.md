@@ -6,7 +6,7 @@
 
 ## Goal
 
-Validate and sanitize input (Joi/Zod) and include OAuth2-style flow patterns.
+Practice protecting an API from bad input by validating and sanitizing request data with Joi or Zod and by modelling the key steps of an OAuth2-style flow.
 
 ## What to do
 

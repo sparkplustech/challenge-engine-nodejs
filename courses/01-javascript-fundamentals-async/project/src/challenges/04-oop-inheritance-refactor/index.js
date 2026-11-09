@@ -1,4 +1,14 @@
-// TODO: Implement 04-oop-inheritance-refactor - OOP Inheritance Refactor
 export function solve_04_oop_inheritance_refactor() {
-  throw new Error('Not implemented');
+  class Animal {
+    speak() {
+      return "Animal sound";
+    }
+  }
+  class Dog extends Animal {
+    speak() {
+      return "Woof!";
+    }
+  }
+
+  return new Dog().speak();
 }

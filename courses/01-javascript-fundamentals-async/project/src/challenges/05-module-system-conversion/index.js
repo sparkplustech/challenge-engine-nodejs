@@ -1,4 +1,4 @@
-// TODO: Implement 05-module-system-conversion - Module System Conversion
+import { multiply } from "./math.js";
 export function solve_05_module_system_conversion() {
-  throw new Error('Not implemented');
+  return multiply(2, 3);
 }

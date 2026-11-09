@@ -6,7 +6,7 @@
 
 ## Goal
 
-Write generics, a type guard, and utility types (`Partial`, `Pick`, etc.) in TypeScript.
+Practice writing reusable, type-safe TypeScript by creating generic functions, narrowing values with a type guard, and using utility types such as `Partial` and `Pick`.
 
 ## What to do
 

@@ -1,7 +1,7 @@
 import { join } from 'path';
 import { execFileSync } from 'node:child_process';
 import { readJson, readText, writeJson, exists, clampScore, roundScore } from '../utils/io.js';
-import { loadDotEnv } from '../utils/env.js';
+import { loadChallengeEnv } from '../challenge-env.js';
 import { resolveRepoRoot } from '../utils/root.js';
 import {
   AVAILABLE_PATTERN_KEYS,
@@ -122,7 +122,12 @@ function readChallengeContext({ projectDir, challengeId, fallbackChallengeConfig
   };
 }
 
-function runFunctionalTests(files, projectDir, challengeId) {
+function getNodeTestArgs(courseId, testFile) {
+  return courseId === '05-nestjs-enterprise-framework'
+    ? ['--import=reflect-metadata', '--import=tsx', '--test', testFile]
+    : ['--experimental-strip-types', '--test', testFile];
+}
+function runFunctionalTests(files, projectDir, challengeId, courseId, env = process.env) {
   const fileTotal = files.length;
   if (fileTotal === 0) {
     return {
@@ -150,8 +155,10 @@ function runFunctionalTests(files, projectDir, challengeId) {
 
   if (testFile && filePassedChecks === fileTotal) {
     try {
-      execFileSync('node', ['--experimental-strip-types', '--test', testFile], {
+      const testArgs = getNodeTestArgs(courseId, testFile);
+      execFileSync('node', testArgs, {
         cwd: projectDir,
+        env,
         encoding: 'utf-8',
         stdio: 'pipe'
       });
@@ -283,47 +290,48 @@ function runBestPractices(files) {
   };
 }
 
-function runE2ETests(projectDir, challengeId) {
-  const unitCandidates = [
-    join(projectDir, 'tests', `challenge-${challengeId}.test.js`),
-    join(projectDir, 'tests', `challenge-${challengeId}.test.ts`)
-  ];
-
+function runE2ETests(projectDir, challengeId, courseId) {
   const e2eCandidates = [
-    join(projectDir, 'tests', 'e2e', `challenge-${challengeId}.spec.js`),
-    join(projectDir, 'tests', 'e2e', `challenge-${challengeId}.spec.ts`)
+    join(projectDir, 'tests', 'e2e', 'challenge-' + challengeId + '.spec.js'),
+    join(projectDir, 'tests', 'e2e', 'challenge-' + challengeId + '.spec.ts')
   ];
 
-  const hasUnit = unitCandidates.some((file) => exists(file));
-  const hasE2E = e2eCandidates.some((file) => exists(file));
-
-  if (!hasUnit && !hasE2E) {
+  const testFile = e2eCandidates.find((file) => exists(file));
+  if (!testFile) {
     return {
-      score: 100,
+      score: 0,
       mode: 'not_configured',
-      hasUnit,
-      hasE2E,
-      unitCandidates,
+      hasE2E: false,
+      testFile: null,
+      testPassed: null,
+      testError: null,
       e2eCandidates,
-      note: 'No unit/e2e challenge tests were found; this layer is treated as neutral.'
+      note: 'No E2E spec is configured; E2E does not reduce the core score.'
     };
   }
 
-  let score = 30;
-  if (hasUnit) {
-    score += 35;
-  }
-  if (hasE2E) {
-    score += 35;
+  let testPassed = true;
+  let testError = null;
+  try {
+    execFileSync('node', getNodeTestArgs(courseId, testFile), {
+      cwd: projectDir,
+      encoding: 'utf-8',
+      stdio: 'pipe'
+    });
+  } catch (error) {
+    testPassed = false;
+    testError = String(error.stderr || error.stdout || error.message).trim().slice(0, 500);
   }
 
   return {
-    score,
-    mode: 'evidence',
-    hasUnit,
-    hasE2E,
-    unitCandidates,
-    e2eCandidates
+    score: testPassed ? 100 : 0,
+    mode: testPassed ? 'passed' : 'failed',
+    hasE2E: true,
+    testFile,
+    testPassed,
+    testError,
+    e2eCandidates,
+    note: 'E2E specs are executed and contribute optional bonus points.'
   };
 }
 
@@ -365,9 +373,7 @@ function isEligibleForAi(files) {
   return totalChars >= 80;
 }
 
-async function runAiReview({ rootDir, courseConfig, challenge, challengeReadme, files }) {
-  loadDotEnv(rootDir);
-
+async function runAiReview({ courseConfig, challenge, challengeReadme, files }) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return {
@@ -494,25 +500,33 @@ async function runAiReview({ rootDir, courseConfig, challenge, challengeReadme, 
   }
 }
 
-function calculateTotalScore(layers, scoring) {
-  // Keep challenges at 0% until all scoped files are implemented (no placeholder/missing files).
+export function calculateTotalScore(layers, scoring) {
+  // Missing or failing scoped implementation/unit checks remain a hard failure.
   if (
     layers.functionalTests.score <= 0 ||
     layers.functionalTests.passedChecks < layers.functionalTests.totalChecks
   ) {
-    return 0;
+    return { score: 0, coreScore: 0 };
   }
 
   const safeScoring = normalizeScoring(scoring);
-  const total =
-    layers.functionalTests.score * safeScoring.functionalTests +
-    layers.codeQuality.score * safeScoring.codeQuality +
-    layers.architecture.score * safeScoring.architecture +
-    layers.bestPractices.score * safeScoring.bestPractices +
-    layers.e2eTests.score * safeScoring.e2eTests +
-    layers.aiReview.score * safeScoring.aiReview;
+  const coreKeys = ['functionalTests', 'codeQuality', 'architecture', 'bestPractices'];
+  const bonusKeys = ['e2eTests', 'aiReview'];
+  const coreWeight = coreKeys.reduce((total, key) => total + safeScoring[key], 0);
+  const weightedCore = coreKeys.reduce(
+    (total, key) => total + layers[key].score * safeScoring[key],
+    0
+  );
+  const coreScore = coreWeight > 0 ? roundScore(weightedCore / coreWeight) : 0;
+  const bonusScore = bonusKeys.reduce(
+    (total, key) => total + layers[key].score * safeScoring[key],
+    0
+  );
 
-  return roundScore(total);
+  return {
+    coreScore,
+    score: clampScore(roundScore(coreScore + bonusScore))
+  };
 }
 
 function mergeByChallengeOrder(existing, incoming, challengeOrder) {
@@ -637,6 +651,8 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
     throw new Error(`Course ${courseId} has no challenges configured.`);
   }
 
+  const challengeEnv = loadChallengeEnv(rootDir);
+
   const targets = challengeId
     ? courseConfig.challenges.filter((challenge) => challenge.id === challengeId)
     : courseConfig.challenges;
@@ -659,13 +675,12 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
     });
 
     const layers = {
-      functionalTests: runFunctionalTests(files, projectDir, challenge.id),
+      functionalTests: runFunctionalTests(files, projectDir, challenge.id, courseId, challengeEnv),
       codeQuality: runCodeQuality(files),
       architecture: runArchitectureChecks(files, metadata.patternsRequired || []),
       bestPractices: runBestPractices(files),
-      e2eTests: runE2ETests(projectDir, challenge.id),
+      e2eTests: runE2ETests(projectDir, challenge.id, courseId),
       aiReview: await runAiReview({
-        rootDir,
         courseConfig,
         challenge,
         challengeReadme,
@@ -673,8 +688,8 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
       })
     };
 
-    const score = calculateTotalScore(layers, courseConfig.scoring);
-    const passed = score >= (courseConfig.requirements?.minScore ?? 80);
+    const { score, coreScore } = calculateTotalScore(layers, courseConfig.scoring);
+    const passed = coreScore >= (courseConfig.requirements?.minScore ?? 80);
 
     freshResults.push({
       challengeId: challenge.id,
@@ -682,6 +697,7 @@ export async function runCourseReview({ rootDir = resolveRepoRoot(import.meta.ur
       moduleId: challenge.moduleId,
       moduleName: challenge.moduleName,
       score,
+      coreScore,
       passed,
       layers,
       reviewedAt: new Date().toISOString()

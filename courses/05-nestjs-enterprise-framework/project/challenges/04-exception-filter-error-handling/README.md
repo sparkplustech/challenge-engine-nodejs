@@ -6,7 +6,7 @@
 
 ## Goal
 
-Map exceptions to HTTP responses with a Nest exception filter.
+Practice returning consistent errors from a NestJS API by implementing an exception filter that maps thrown errors to HTTP responses.
 
 ## What to do
 

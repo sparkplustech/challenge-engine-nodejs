@@ -6,7 +6,7 @@
 
 ## Goal
 
-Define a Nest module, controller, and injectable service wired together.
+Practice the three core NestJS building blocks by creating a module, a controller, and an injectable service, then connecting them so the controller can use the service.
 
 ## What to do
 

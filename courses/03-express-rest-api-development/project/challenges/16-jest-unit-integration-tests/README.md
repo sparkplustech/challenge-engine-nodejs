@@ -6,7 +6,7 @@
 
 ## Goal
 
-Write Jest unit or integration tests with `describe` and `it` blocks.
+Practice writing automated tests by using Jest's `describe` and `it` blocks to check that a unit of code behaves as expected.
 
 ## What to do
 

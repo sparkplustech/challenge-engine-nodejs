@@ -6,7 +6,7 @@
 
 ## Goal
 
-Implement repository-pattern data access with TypeORM or Prisma.
+Practice keeping database code out of controllers by putting data access behind a repository or service boundary (for example with TypeORM or Prisma).
 
 ## What to do
 

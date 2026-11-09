@@ -6,7 +6,7 @@
 
 ## Goal
 
-Handle refresh token rotation and API key authentication with JWT utilities.
+Practice supporting long-lived sessions and service clients by adding refresh-token rotation and API-key authentication alongside JWT access tokens.
 
 ## What to do
 

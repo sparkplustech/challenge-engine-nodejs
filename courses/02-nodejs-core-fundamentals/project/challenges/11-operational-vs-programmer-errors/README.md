@@ -6,7 +6,7 @@
 
 ## Goal
 
-Classify operational vs programmer errors and handle recoverable failures with `try/catch`.
+Practice telling recoverable operational errors apart from programmer bugs and handling each category appropriately with `try/catch`.
 
 ## What to do
 

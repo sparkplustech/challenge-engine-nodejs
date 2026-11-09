@@ -6,7 +6,7 @@
 
 ## Goal
 
-Create an HTTPS server with TLS hardening using `https.createServer`.
+Practice serving an API over HTTPS by creating a TLS-enabled server with `https.createServer` and applying sensible security options.
 
 ## What to do
 

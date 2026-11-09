@@ -6,7 +6,7 @@
 
 ## Goal
 
-Represent service discovery or registry patterns for dynamic endpoints.
+Practice letting services find each other at runtime by modelling a service registry or discovery helper that resolves endpoints dynamically.
 
 ## What to do
 

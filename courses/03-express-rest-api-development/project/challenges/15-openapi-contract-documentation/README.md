@@ -6,7 +6,7 @@
 
 ## Goal
 
-Document API contracts with OpenAPI/Swagger artifacts and route metadata.
+Practice documenting an API so other developers can use it by producing OpenAPI/Swagger contract details for at least one route's request and response.
 
 ## What to do
 

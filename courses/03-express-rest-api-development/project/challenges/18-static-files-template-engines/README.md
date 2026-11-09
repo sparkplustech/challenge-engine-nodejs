@@ -6,7 +6,7 @@
 
 ## Goal
 
-Serve static files with `express.static` and configure a template view engine.
+Practice serving more than JSON by using `express.static` for static assets and configuring a view engine (such as EJS) to render templates.
 
 ## What to do
 

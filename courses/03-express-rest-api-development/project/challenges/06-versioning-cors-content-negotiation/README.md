@@ -6,7 +6,7 @@
 
 ## Goal
 
-Configure CORS, API versioning, and content negotiation (`Accept` headers) on an Express app.
+Practice making an API safe to call from browsers and ready to evolve by configuring CORS, choosing a versioning strategy, and respecting `Accept` headers.
 
 ## What to do
 

@@ -6,7 +6,7 @@
 
 ## Goal
 
-Use path alias imports (`@/...`) and custom type definitions in TypeScript.
+Practice keeping imports clean in a TypeScript project by using a path alias such as `@/...` and adding custom type definitions for shared or external code.
 
 ## What to do
 

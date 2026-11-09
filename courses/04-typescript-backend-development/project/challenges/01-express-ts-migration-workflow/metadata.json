@@ -1,12 +1,12 @@
 {
-  "challengeId": "07-express-ts-migration-workflow",
+  "challengeId": "01-express-ts-migration-workflow",
   "challengeName": "Express TS Migration Workflow",
   "moduleId": "m2-typescript-node-express",
   "moduleName": "TypeScript with Node.js & Express",
   "difficulty": "intermediate",
   "estimatedTime": "4 hours",
   "filesToCheck": [
-    "src/challenges/07-express-ts-migration-workflow/index.ts",
+    "src/challenges/01-express-ts-migration-workflow/index.ts",
     "package.json"
   ],
   "skills": [
